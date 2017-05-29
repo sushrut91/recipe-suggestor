@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\ca843e390e55373aab45e938995f51c43c3dd70d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_9e6967ef71ca14df9abe4c14d7ce4303472fabfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.20.0\313dc99a7963523871495897ca11aa8472b3c6fd\google-http-client-android-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="313dc99a7963523871495897ca11aa8472b3c6fd">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-http-client-android-1.20.0_768028885bd0d69bdb1f717de4aeaf84658aa355.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\c2f63b52fb6991aee1a677c70eaebe41e7273b9e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a31e9aa8f67a93daf31a81b53102ef34ab686bd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.20.0\5673179575c32b69a474334255c3044adf18d40\google-api-client-android-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="05673179575c32b69a474334255c3044adf18d40">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-android-1.20.0_5aae94142952e4c2241ed6d545e76f067f973101\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\2846696cafa0e76b2f9bfba75ab7f96a67a6e29d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f238bcca27aa791553770bedceebf40d99acfa1e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\b641292b21a9a679c52f07953a95fe3d0743dd80\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b44eb862d7872be12fb072808f04a24de5fe08e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\gson-2.1_1855f8b35ffcce307c64ea7730e4c09111cd657f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_eae8fca1b3659729d9ba33a9408e8f51ada9c938\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.20.0\9204765f39000f6109c927ac66c7963bf9c7df19\google-http-client-gson-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9204765f39000f6109c927ac66c7963bf9c7df19">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-gson-1.20.0_8d3ead026452b2d4e5f442f18afcf51abaaba066\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\support-annotations-25.3.1_ffefd228909db9487bfed915f1ffa6182de5341f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.21.0\42631630fe1276d4d6d6397bb07d53a4e4fec278\google-http-client-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="42631630fe1276d4d6d6397bb07d53a4e4fec278">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-1.21.0_8c71ccf2d241a084072f16b1d973fefb4c965636\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.21.0\61ec42bbfc51aafde5eb8b4923c602c5b5965bc2\google-oauth-client-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="61ec42bbfc51aafde5eb8b4923c602c5b5965bc2">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-oauth-client-1.21.0_f3dd6e8ddbaa97e173ed7799f6937f60cc45e803.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\3057cb8ede34c407fa8b4d387a0284520d4b9a12\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_5c5a9829dbf8f8775d3cd309f8ff216826829ea4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\e3400048e2a434f7497341fb07aa013be218d31a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_0bbfab7ebf1c38a14fc2304aa128c913594b60b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\constraint-layout-solver-1.0.2_d1d989361c6dca5578261b1df0d72832410f6ff7.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\33eb2055c2a7c6c5b1901e9e7b807a69085fcd93\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2585908c9d8de2d19eea132a5a72c77c71efc6dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\e1436593d330a3e055c93124ec4d827b952991e8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_fe7097c5a9126865663d6a7af4123f8d2dcdb2b5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.1.3_716fb3ee449509434b0a153d151554ed8bfceb4b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.21.0\16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc\google-api-client-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-api-client-1.21.0_54391175fb8df3bb975856bdeb6da76424a49c3b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\b2c5b3b26c77bec093b4b64db31d59abc38fac53\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_80999d5aa8270b7e3689b4b4a318ae757dcba162\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\aab9658b09ee312e427aa34ebab14d9e72c0f6d1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_05ae54930720094c568ee621ae23e497b7c31f52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\32ca175acaceec949b818f54a0241b68f8971f01\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_12d6824e5c8cbb7b30b784f9266c7d251619cdbb.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\5d366f4fdecb0a1c0416e0fe469d6fbac26e3980\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2185de84658907b238752b4d313afd72176033dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.21.0\8ce17bdd15fff0fd8cf359757f29e778fc7191ad\google-http-client-jackson2-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ce17bdd15fff0fd8cf359757f29e778fc7191ad">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-jackson2-1.21.0_3dc01b2a98eaa13efc75bf8c1290208777361f9f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\f5b1c6737c950665b285a8247d6d98af4b891908\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a9501da491904ea4bcb797062b0cda07d4e92c08\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\jsr305-1.3.9_1560bf10f3cfe0728e5b58b2e2089ca18fd06ffd.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="330475a816951d0e1dcde5bd8bdd9915a9c1ce4c">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\guava-jdk5-17.0_297cde2ad598bd09cb17e99e432b47c562585696.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-vision\v1-rev2-1.21.0\4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85\google-api-services-vision-v1-rev2-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-services-vision-v1-rev2-1.21.0_6249df39f6cff067e2f99559826fba5e5210ee99\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\c2f63b52fb6991aee1a677c70eaebe41e7273b9e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_a31e9aa8f67a93daf31a81b53102ef34ab686bd5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.20.0\5673179575c32b69a474334255c3044adf18d40\google-api-client-android-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="05673179575c32b69a474334255c3044adf18d40">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-api-client-android-1.20.0_5aae94142952e4c2241ed6d545e76f067f973101.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_d1d989361c6dca5578261b1df0d72832410f6ff7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.1_1855f8b35ffcce307c64ea7730e4c09111cd657f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\2846696cafa0e76b2f9bfba75ab7f96a67a6e29d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_f238bcca27aa791553770bedceebf40d99acfa1e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.20.0\313dc99a7963523871495897ca11aa8472b3c6fd\google-http-client-android-1.20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="313dc99a7963523871495897ca11aa8472b3c6fd">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-android-1.20.0_768028885bd0d69bdb1f717de4aeaf84658aa355\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\ca843e390e55373aab45e938995f51c43c3dd70d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9e6967ef71ca14df9abe4c14d7ce4303472fabfe\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\b641292b21a9a679c52f07953a95fe3d0743dd80\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_b44eb862d7872be12fb072808f04a24de5fe08e6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-1.3.9_1560bf10f3cfe0728e5b58b2e2089ca18fd06ffd\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.20.0\9204765f39000f6109c927ac66c7963bf9c7df19\google-http-client-gson-1.20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9204765f39000f6109c927ac66c7963bf9c7df19">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-http-client-gson-1.20.0_8d3ead026452b2d4e5f442f18afcf51abaaba066.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_ffefd228909db9487bfed915f1ffa6182de5341f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\e3400048e2a434f7497341fb07aa013be218d31a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0bbfab7ebf1c38a14fc2304aa128c913594b60b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.21.0\61ec42bbfc51aafde5eb8b4923c602c5b5965bc2\google-oauth-client-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="61ec42bbfc51aafde5eb8b4923c602c5b5965bc2">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-oauth-client-1.21.0_f3dd6e8ddbaa97e173ed7799f6937f60cc45e803\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.21.0\42631630fe1276d4d6d6397bb07d53a4e4fec278\google-http-client-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="42631630fe1276d4d6d6397bb07d53a4e4fec278">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-http-client-1.21.0_8c71ccf2d241a084072f16b1d973fefb4c965636.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\3057cb8ede34c407fa8b4d387a0284520d4b9a12\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5c5a9829dbf8f8775d3cd309f8ff216826829ea4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\b2c5b3b26c77bec093b4b64db31d59abc38fac53\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_80999d5aa8270b7e3689b4b4a318ae757dcba162.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\33eb2055c2a7c6c5b1901e9e7b807a69085fcd93\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_2585908c9d8de2d19eea132a5a72c77c71efc6dc.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-jdk5-17.0_297cde2ad598bd09cb17e99e432b47c562585696\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\jackson-core-2.1.3_716fb3ee449509434b0a153d151554ed8bfceb4b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\aab9658b09ee312e427aa34ebab14d9e72c0f6d1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_05ae54930720094c568ee621ae23e497b7c31f52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\32ca175acaceec949b818f54a0241b68f8971f01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_12d6824e5c8cbb7b30b784f9266c7d251619cdbb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\5d366f4fdecb0a1c0416e0fe469d6fbac26e3980\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_2185de84658907b238752b4d313afd72176033dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.android\build-cache\f5b1c6737c950665b285a8247d6d98af4b891908\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\classes_a9501da491904ea4bcb797062b0cda07d4e92c08.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-vision\v1-rev2-1.21.0\4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85\google-api-services-vision-v1-rev2-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4db84d916e8ec80d9aa11c5f89a6cb6621ac1c85">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-api-services-vision-v1-rev2-1.21.0_6249df39f6cff067e2f99559826fba5e5210ee99.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.21.0\16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc\google-api-client-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-1.21.0_54391175fb8df3bb975856bdeb6da76424a49c3b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.21.0\8ce17bdd15fff0fd8cf359757f29e778fc7191ad\google-http-client-jackson2-1.21.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8ce17bdd15fff0fd8cf359757f29e778fc7191ad">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\google-http-client-jackson2-1.21.0_3dc01b2a98eaa13efc75bf8c1290208777361f9f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.android\build-cache\e1436593d330a3e055c93124ec4d827b952991e8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fe7097c5a9126865663d6a7af4123f8d2dcdb2b5\classes.dex" />
+    </item>
+
+</items>
