@@ -56,15 +56,6 @@
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b44eb862d7872be12fb072808f04a24de5fe08e6\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
-        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\gson-2.1_1855f8b35ffcce307c64ea7730e4c09111cd657f.jar" />
-    </item>
-    <item
         is-multidex="true"
         jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
@@ -72,6 +63,15 @@
         revision="25.0.3"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_eae8fca1b3659729d9ba33a9408e8f51ada9c938\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.1\2e66da15851f9f5b5079228f856c2f090ba98c38\gson-2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\release\gson-2.1_1855f8b35ffcce307c64ea7730e4c09111cd657f.jar" />
     </item>
     <item
         is-multidex="true"
@@ -241,7 +241,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="330475a816951d0e1dcde5bd8bdd9915a9c1ce4c">
+        sha1="668392ab1c293c7c03e8f65c0e7f935126255b84">
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
     </item>
     <item
@@ -369,6 +369,15 @@
         revision="25.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0bbfab7ebf1c38a14fc2304aa128c913594b60b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-1.0.19_0dff159fdcb44515c4eb0d108f05e5d6977068d5\classes.dex" />
     </item>
     <item
         is-multidex="true"

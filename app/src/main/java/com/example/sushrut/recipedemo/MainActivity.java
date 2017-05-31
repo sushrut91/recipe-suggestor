@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent recipeIntent = new Intent(MainActivity.this,RecipeCall.class);
                 MainActivity.this.startActivity(recipeIntent);
+
             }
         });
     }
