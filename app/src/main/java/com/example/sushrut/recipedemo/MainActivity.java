@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Path;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -34,8 +35,12 @@ import com.google.api.services.vision.v1.model.EntityAnnotation;
 import com.google.api.services.vision.v1.model.Feature;
 import com.google.api.services.vision.v1.model.Image;
 
+import org.opencv.android.OpenCVLoader;
+
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -53,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView mainImageView;
     private TextView searchResultTxt;
+
+
+    static {
+        if(!OpenCVLoader.initDebug()){
+            Log.d(TAG, "OpenCV not loaded");
+        } else {
+            Log.d(TAG, "OpenCV loaded");
+        }
+    }
 
 
     @Override
@@ -96,7 +110,22 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == HOME_SCREEN_ACTIVITY && resultCode == RESULT_OK && data != null) {
-            uploadImage(data.getData());
+            Uri tempUri = data.getData();
+            try{
+                if (PermissionUtils.requestPermission(
+                        this,
+                        HOME_SCREEN_ACTIVITY,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    ImageProcessor ip = new ImageProcessor();
+                    String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
+                    Bitmap bmp = ip.ApplyImageFilters(filePath);
+
+                    mainImageView = (ImageView) findViewById(R.id.main_image);
+                    mainImageView.setImageBitmap(bmp);
+                }
+            }catch(Exception se){
+                Log.d(TAG, se.getMessage());
+            }
         }
         else if ( requestCode == CAMERA_ACTIVITY && resultCode == RESULT_OK && data != null){
             uploadImageFromCamera(data);
