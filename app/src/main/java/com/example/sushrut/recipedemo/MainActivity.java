@@ -118,10 +118,10 @@ public class MainActivity extends AppCompatActivity {
                         Manifest.permission.READ_EXTERNAL_STORAGE)) {
                     ImageProcessor ip = new ImageProcessor();
                     String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
-                    Bitmap bmp = ip.ApplyImageFilters(filePath);
-
-                    mainImageView = (ImageView) findViewById(R.id.main_image);
-                    mainImageView.setImageBitmap(bmp);
+                    //Bitmap bmp = ip.ApplyImageFilters(filePath);
+                    ip.GetContourMatPointList(filePath);
+                    //mainImageView = (ImageView) findViewById(R.id.main_image);
+                    //mainImageView.setImageBitmap(bmp);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
