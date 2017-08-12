@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,79 +108,54 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == HOME_SCREEN_ACTIVITY && resultCode == RESULT_OK && data != null) {
+        if (requestCode == HOME_SCREEN_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             Uri tempUri = data.getData();
             try{
                 if (PermissionUtils.requestPermission(
                         this,
                         HOME_SCREEN_ACTIVITY,
-                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                        Manifest.permission.READ_EXTERNAL_STORAGE) &&
+                        PermissionUtils.requestPermission(
+                                this,
+                                HOME_SCREEN_ACTIVITY,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
                     ImageProcessor ip = new ImageProcessor();
                     String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
-                    //Bitmap bmp = ip.ApplyImageFilters(filePath);
                     ip.DetectShapes(filePath);
-                    //mainImageView = (ImageView) findViewById(R.id.main_image);
-                    //mainImageView.setImageBitmap(bmp);
+                    Toast.makeText(this,"Shapes detected",Toast.LENGTH_LONG);
+                    CommonUtils.DeleteCameraImage(getApplicationContext(),tempUri);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
             }
         }
         else if ( requestCode == CAMERA_ACTIVITY && resultCode == RESULT_OK && data != null){
-            uploadImageFromCamera(data);
-        }
-    }
-
-    public void uploadImageFromCamera(Intent data)
-    {
-        if(data != null)
-        {
-            Bundle imgBundle = data.getExtras();
-            Bitmap searchBmp = (Bitmap)imgBundle.get("data");
-            searchBmp = ImageUtils.scaleBitmapDown(searchBmp,1200);
+            //uploadImageFromCamera(data);
+            Uri tempUri = data.getData();
             try{
-                mainImageView.setImageResource(0);
-                GoogleCloudVision gcv = new GoogleCloudVision(getPackageName(), getPackageManager(),
-                        this.getClass().getSimpleName());
-                gcv.callCloudVision(searchBmp);
-            }
-            catch (IOException ex){
-                Log.d(TAG, "Image picking failed because " + ex.getMessage());
-                Toast.makeText(this,"Failed to upload image.",Toast.LENGTH_SHORT);
-            }
-        }
-        else{
-            Toast.makeText(this,"Please click a photo.",Toast.LENGTH_LONG).show();
-        }
-    }
-    public void uploadImage(Uri uri) {
-        if (uri != null) {
-            try {
-                // scale the image to save on bandwidth
-                Bitmap bitmap =
-                        ImageUtils.scaleBitmapDown(
-                                MediaStore.Images.Media.getBitmap(getContentResolver(), uri),
-                                1200);
+                if (PermissionUtils.requestPermission(
+                        this,
+                        CAMERA_ACTIVITY,
+                        Manifest.permission.READ_EXTERNAL_STORAGE) &&
+                        PermissionUtils.requestPermission(
+                                this,
+                                CAMERA_ACTIVITY,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                GoogleCloudVision gcv = new GoogleCloudVision(getPackageName(), getPackageManager(),
-                        this.getClass().getSimpleName());
-                gcv.callCloudVision(bitmap);
-                mainImageView.setImageBitmap(bitmap);
-
-            } catch (IOException e) {
-                Log.d(TAG, "Image picking failed because " + e.getMessage());
-                Toast.makeText(this, R.string.image_picker_error, Toast.LENGTH_LONG).show();
+                    ImageProcessor ip = new ImageProcessor();
+                    Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
+                    CommonUtils.CompressBitmap(capturedImg);
+                    String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
+                    String shape = ip.DetectShapes(filePath);
+                    Toast.makeText(this,"Shape detected" + shape,Toast.LENGTH_LONG).show();
+                    CommonUtils.DeleteCameraImage(getApplicationContext(),tempUri);
+                }
+            }catch(Exception se){
+                Log.d(TAG, se.getMessage());
             }
-        } else {
-            Log.d(TAG, "Image picker gave us a null image.");
-            Toast.makeText(this, R.string.image_picker_error, Toast.LENGTH_LONG).show();
         }
     }
-
-
-
-
-
 
     private void startCamera()
     {

@@ -1,26 +1,50 @@
 package com.example.sushrut.recipedemo;
+import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.os.Debug;
-
-import org.opencv.core.CvType;
+import android.net.Uri;
+import android.provider.MediaStore;
+import android.util.Log;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
-import org.opencv.core.Point;
 import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.android.Utils;
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Class used for image processing , shape detectition and calling Google Cloud Vision
  * Created by Sushrut on 8/7/2017.
  */
 
 public class ImageProcessor {
+    public static final String TAG = "ImageProcessor";
     public ImageProcessor() {
+    }
+
+    public void uploadImageToCloud(Uri uri, ContentResolver contentResolver,
+                                   String packageName, PackageManager packageManager) {
+        if (uri != null) {
+            try {
+                // scale the image to save on bandwidth
+                Bitmap bitmap =
+                        ImageUtils.scaleBitmapDown(
+                                MediaStore.Images.Media.getBitmap(contentResolver, uri),
+                                1200);
+
+                GoogleCloudVision gcv = new GoogleCloudVision(packageName, packageManager,
+                        this.getClass().getSimpleName());
+                gcv.callCloudVision(bitmap);
+
+            } catch (IOException e) {
+                Log.d(TAG, "Image picking failed because " + e.getMessage());
+            }
+        } else {
+            Log.d(TAG, "Image picker gave us a null image.");
+        }
     }
 
     public String DetectShapes(String filePath){
@@ -70,4 +94,5 @@ public class ImageProcessor {
         }
         return image;
     }
+
 }

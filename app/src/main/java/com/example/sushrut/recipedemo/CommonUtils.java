@@ -3,13 +3,19 @@ package com.example.sushrut.recipedemo;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.net.URISyntaxException;
 
 /**
@@ -77,5 +83,21 @@ public class CommonUtils {
 
     public static boolean isMediaDocument(Uri uri) {
           return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
+    public static Bitmap CompressBitmap(Bitmap bmp){
+        ByteArrayOutputStream bmpOutput = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.JPEG,50,bmpOutput);
+        Bitmap compressedImg = BitmapFactory.decodeStream(new ByteArrayInputStream(bmpOutput.toByteArray()));
+        return bmp;
+    }
+
+    public static void CreateCompressedBitmap(File file){
+
+    }
+
+    public static void DeleteCameraImage(Context appContext, Uri uri) {
+        appContext.getContentResolver().delete(uri, null,
+                null);
     }
 }
