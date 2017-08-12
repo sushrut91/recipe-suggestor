@@ -2,7 +2,9 @@ package com.example.sushrut.recipedemo;
 import android.graphics.Bitmap;
 import android.os.Debug;
 
+import org.opencv.core.CvType;
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
 import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -21,13 +23,40 @@ public class ImageProcessor {
     public ImageProcessor() {
     }
 
-    public void GetContourMatPointList(String filePath){
+    public String DetectShapes(String filePath){
+        String detectedShape = null;
+        List<MatOfPoint> contourList = GetContourMatPointList(filePath);
+        List<MatOfPoint2f> contourList2f = new ArrayList<MatOfPoint2f>();
+        if(contourList != null){
+            for(MatOfPoint c : contourList)
+            {
+                MatOfPoint2f point = new MatOfPoint2f(c.toArray());
+                contourList2f.add(point);
+            }
+            for(MatOfPoint2f mop :contourList2f ){
+                double arcLen = Imgproc.arcLength(mop,true);
+                Imgproc.approxPolyDP(mop,mop,0.04 * arcLen,true);
+                //1x4 format
+                if(mop.size().height == 3) {
+                    detectedShape = "Triangle";
+                }else if(mop.size().height == 4){
+                    detectedShape = "Rectangle";
+                }else if(mop.size().height == 5){
+                    detectedShape = "Pentagon";
+                }else{
+                    detectedShape = "Circle";
+                }
+            }
+        }
+        return detectedShape;
+    }
+    private List<MatOfPoint> GetContourMatPointList(String filePath){
         Mat image = ApplyImageFilters(filePath);
         Mat tempImage = image.clone();
         List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Imgproc.findContours(tempImage,contours,tempImage,Imgproc.RETR_EXTERNAL,Imgproc.CHAIN_APPROX_SIMPLE);
         System.out.println("Contour size:" +contours.size());
-        //return contours;
+        return contours;
     }
 
     private Mat ApplyImageFilters(String filePath){
@@ -41,6 +70,4 @@ public class ImageProcessor {
         }
         return image;
     }
-
-
 }

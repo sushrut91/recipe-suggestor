@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     ImageProcessor ip = new ImageProcessor();
                     String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
                     //Bitmap bmp = ip.ApplyImageFilters(filePath);
-                    ip.GetContourMatPointList(filePath);
+                    ip.DetectShapes(filePath);
                     //mainImageView = (ImageView) findViewById(R.id.main_image);
                     //mainImageView.setImageBitmap(bmp);
                 }
