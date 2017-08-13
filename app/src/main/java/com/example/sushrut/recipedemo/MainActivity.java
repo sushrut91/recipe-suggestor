@@ -49,7 +49,6 @@ import static java.lang.System.out;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static final String CLOUD_VISION_API_KEY = "####";
     public static final String TAG=MainActivity.class.getSimpleName();
 
     public static final int HOME_SCREEN_ACTIVITY = 1;
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
                     ip.DetectShapes(filePath);
                     Toast.makeText(this,"Shapes detected",Toast.LENGTH_LONG);
-                    CommonUtils.DeleteCameraImage(getApplicationContext(),tempUri);
+                    ip.uploadImageToCloud(tempUri,getContentResolver(),getPackageName(),getPackageManager());
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());

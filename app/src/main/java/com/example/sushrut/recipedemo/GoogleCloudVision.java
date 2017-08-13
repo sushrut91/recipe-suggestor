@@ -17,8 +17,6 @@ import com.google.api.services.vision.v1.model.AnnotateImageRequest;
 import com.google.api.services.vision.v1.model.AnnotateImageResponse;
 import com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest;
 import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
-import com.google.api.services.vision.v1.model.ColorInfo;
-import com.google.api.services.vision.v1.model.DominantColorsAnnotation;
 import com.google.api.services.vision.v1.model.EntityAnnotation;
 import com.google.api.services.vision.v1.model.Feature;
 import com.google.api.services.vision.v1.model.Image;
@@ -34,7 +32,7 @@ import java.util.List;
  */
 
 public class GoogleCloudVision {
-    public static final String CLOUD_VISION_API_KEY = "####";
+    public static String CLOUD_VISION_API_KEY = null;
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
     private String packageName = null;
@@ -48,6 +46,7 @@ public class GoogleCloudVision {
         this.packageName = packageName;
         this.packageManager = packageManager;
         this.activitySimpleName = activitySimpleName;
+        this.CLOUD_VISION_API_KEY = BuildConfig.GOOGLE_CV_KEY;
     }
 
     public List<AnnotateImageResponse> getResponsesList(){
