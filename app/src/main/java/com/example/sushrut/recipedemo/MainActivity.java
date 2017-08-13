@@ -51,13 +51,10 @@ import static java.lang.System.out;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG=MainActivity.class.getSimpleName();
 
-    public static final int HOME_SCREEN_ACTIVITY = 1;
+    public static final int PICK_IMAGE_ACTIVITY = 1;
     public static final int CAMERA_ACTIVITY = 2;
-    public static final int RECIPE_SEARCH_ACTIVITY = 3;
-
-    private ImageView mainImageView;
-    private TextView searchResultTxt;
-
+    public static final int BROWSE_RECIPE_ACTIVITY = 3;
+    public static final int ADD_TO_LIBRARY_ACTIVITY = 4;
 
     static {
         if(!OpenCVLoader.initDebug()){
@@ -72,14 +69,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.choiceActionBtn);
-        fab.setOnClickListener(new View.OnClickListener(){
+        FloatingActionButton choiceFab = (FloatingActionButton)findViewById(R.id.choiceActionBtn);
+        choiceFab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select a photo"),HOME_SCREEN_ACTIVITY);
+                startActivityForResult(Intent.createChooser(intent,"Select a photo"),PICK_IMAGE_ACTIVITY);
             }
         });
 
@@ -88,13 +85,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startCamera();
-                mainImageView = (ImageView)findViewById(R.id.main_image);
-                searchResultTxt = (TextView)findViewById(R.id.searchResults);
             }
         });
 
-        FloatingActionButton recipeSearchBtn = (FloatingActionButton)findViewById(R.id.recipeSearchBtn);
-        recipeSearchBtn.setOnClickListener(new View.OnClickListener(){
+        FloatingActionButton recipeBrowseFab = (FloatingActionButton)findViewById(R.id.recipeBrowseBtn);
+        recipeBrowseFab.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent recipeIntent = new Intent(MainActivity.this,RecipeCall.class);
+                MainActivity.this.startActivity(recipeIntent);
+
+            }
+        });
+
+        FloatingActionButton addToLibFab = (FloatingActionButton)findViewById(R.id.addToLibraryBtn);
+        addToLibFab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent recipeIntent = new Intent(MainActivity.this,RecipeCall.class);
@@ -107,16 +112,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == HOME_SCREEN_ACTIVITY  && resultCode == RESULT_OK && data != null) {
+        if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             Uri tempUri = data.getData();
             try{
                 if (PermissionUtils.requestPermission(
                         this,
-                        HOME_SCREEN_ACTIVITY,
+                        PICK_IMAGE_ACTIVITY,
                         Manifest.permission.READ_EXTERNAL_STORAGE) &&
                         PermissionUtils.requestPermission(
                                 this,
-                                HOME_SCREEN_ACTIVITY,
+                                PICK_IMAGE_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
                     ImageProcessor ip = new ImageProcessor();
