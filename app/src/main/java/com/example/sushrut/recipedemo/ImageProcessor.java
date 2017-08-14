@@ -25,28 +25,6 @@ public class ImageProcessor {
     public ImageProcessor() {
     }
 
-    public void uploadImageToCloud(Uri uri, ContentResolver contentResolver,
-                                   String packageName, PackageManager packageManager) {
-        if (uri != null) {
-            try {
-                // scale the image to save on bandwidth
-                Bitmap bitmap =
-                        ImageUtils.scaleBitmapDown(
-                                MediaStore.Images.Media.getBitmap(contentResolver, uri),
-                                1200);
-
-                GoogleCloudVision gcv = new GoogleCloudVision(packageName, packageManager,
-                        this.getClass().getSimpleName());
-                gcv.callCloudVision(bitmap);
-
-            } catch (IOException e) {
-                Log.d(TAG, "Image picking failed because " + e.getMessage());
-            }
-        } else {
-            Log.d(TAG, "Image picker gave us a null image.");
-        }
-    }
-
     public String DetectShapes(String filePath){
         String detectedShape = null;
         List<MatOfPoint> contourList = GetContourMatPointList(filePath);

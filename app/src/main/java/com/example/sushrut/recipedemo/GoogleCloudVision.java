@@ -1,8 +1,11 @@
 package com.example.sushrut.recipedemo;
 
+import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -28,6 +31,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created by Sushrut on 8/6/2017.
@@ -35,7 +39,8 @@ import java.util.List;
 
 public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredient>>{
 
-    public static String CLOUD_VISION_API_KEY = null;
+    private static String CLOUD_VISION_API_KEY = null;
+    private static final String TAG = "GoogleCloudVision";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
     private String packageName = null;
@@ -53,9 +58,23 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
         this.CLOUD_VISION_API_KEY = BuildConfig.GOOGLE_CV_KEY;
     }
 
+    public List<VisualIngredient> uploadImageToGoogleCloud(Uri uri, ContentResolver contentResolver) throws IOException {
+        if (uri != null) {
+                // scale the image to save on bandwidth
+                 bmp = ImageUtils.scaleBitmapDown(
+                                MediaStore.Images.Media.getBitmap(contentResolver, uri),
+                                1200);
+
+                return getGoogleVisualIngredients(bmp);
+        } else {
+            Log.d(TAG, "Image picker gave us a null image.");
+            return  null;
+        }
+    }
     // Get Visual Ingredient flourished with google data
-    public List<VisualIngredient> getGoogleVisualIngredients(Bitmap bmp) throws IOException
+    private List<VisualIngredient> getGoogleVisualIngredients(Bitmap bmp) throws IOException
     {
+        Log.d(TAG,"Getting visual ingridients.");
         return doInBackground();
     }
     public List<AnnotateImageResponse> getResponsesList(){
