@@ -1,5 +1,6 @@
 package com.example.sushrut.recipedemo;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,13 +23,26 @@ import java.util.List;
  */
 
 public class ImageProcessor {
-    public static final String TAG = "ImageProcessor";
-    public ImageProcessor() {
-    }
+    private static final String TAG = "ImageProcessor";
+    private Context context = null;
+    private String filePath = null;
+    private Uri imageUri;
+    private Bitmap capturedImage = null;
 
-    public String DetectShapes(String filePath){
+    public ImageProcessor(Context context ,Uri imageUri) throws URISyntaxException {
+        this.context = context;
+        this.imageUri = imageUri;
+        this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
+    }
+    public ImageProcessor(Context context,Uri imageUri ,Bitmap capturedImage) throws URISyntaxException {
+        this.context = context;
+        this.imageUri = imageUri;
+        this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
+        this.capturedImage = CommonUtils.CompressBitmap(capturedImage);
+    }
+    public String DetectShapes(){
         String detectedShape = null;
-        List<MatOfPoint> contourList = GetContourMatPointList(filePath);
+        List<MatOfPoint> contourList = GetContourMatPointList();
         List<MatOfPoint2f> contourList2f = new ArrayList<MatOfPoint2f>();
         if(contourList != null){
             for(MatOfPoint c : contourList)
@@ -50,10 +65,11 @@ public class ImageProcessor {
                 }
             }
         }
+        CommonUtils.DeleteCameraImage(context,imageUri);
         return detectedShape;
     }
-    private List<MatOfPoint> GetContourMatPointList(String filePath){
-        Mat image = ApplyImageFilters(filePath);
+    private List<MatOfPoint> GetContourMatPointList(){
+        Mat image = ApplyImageFilters();
         Mat tempImage = image.clone();
         List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Imgproc.findContours(tempImage,contours,tempImage,Imgproc.RETR_EXTERNAL,Imgproc.CHAIN_APPROX_SIMPLE);
@@ -61,7 +77,7 @@ public class ImageProcessor {
         return contours;
     }
 
-    private Mat ApplyImageFilters(String filePath){
+    private Mat ApplyImageFilters(){
         Mat image = Imgcodecs.imread(filePath, Imgcodecs.IMREAD_COLOR);
         int width = image.width();
         int height = image.height();

@@ -124,11 +124,6 @@ public class MainActivity extends AppCompatActivity {
                                 PICK_IMAGE_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                    ImageProcessor ip = new ImageProcessor();
-                    String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
-                    ip.DetectShapes(filePath);
-                    Toast.makeText(this,"Shapes detected",Toast.LENGTH_LONG);
-                    ip.uploadImageToCloud(tempUri,getContentResolver(),getPackageName(),getPackageManager());
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
@@ -146,14 +141,8 @@ public class MainActivity extends AppCompatActivity {
                                 this,
                                 CAMERA_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
-                    ImageProcessor ip = new ImageProcessor();
+                    
                     Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
-                    CommonUtils.CompressBitmap(capturedImg);
-                    String filePath = CommonUtils.getFilePathFromURI(getApplicationContext(),tempUri);
-                    String shape = ip.DetectShapes(filePath);
-                    Toast.makeText(this,"Shape detected" + shape,Toast.LENGTH_LONG).show();
-                    CommonUtils.DeleteCameraImage(getApplicationContext(),tempUri);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
