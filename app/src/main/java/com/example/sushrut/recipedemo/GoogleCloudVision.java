@@ -61,7 +61,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
     public List<VisualIngredient> uploadImageToGoogleCloud(Uri uri, ContentResolver contentResolver) throws IOException {
         if (uri != null) {
                 // scale the image to save on bandwidth
-                 bmp = ImageUtils.scaleBitmapDown(
+                 bmp = ImageProcessor.scaleBitmapDown(
                                 MediaStore.Images.Media.getBitmap(contentResolver, uri),
                                 1200);
 

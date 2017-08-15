@@ -3,6 +3,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -24,21 +25,10 @@ import java.util.List;
 
 public class ImageProcessor {
     private static final String TAG = "ImageProcessor";
-    private Context context = null;
-    private String filePath = null;
-    private Uri imageUri;
-    private Bitmap capturedImage = null;
+    private CameraImage ci = null;
 
-    public ImageProcessor(Context context ,Uri imageUri) throws URISyntaxException {
-        this.context = context;
-        this.imageUri = imageUri;
-        this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
-    }
-    public ImageProcessor(Context context,Uri imageUri ,Bitmap capturedImage) throws URISyntaxException {
-        this.context = context;
-        this.imageUri = imageUri;
-        this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
-        this.capturedImage = CommonUtils.CompressBitmap(capturedImage);
+    public ImageProcessor(CameraImage ci){
+        this.ci = ci;
     }
     public String DetectShapes(){
         String detectedShape = null;
@@ -65,7 +55,7 @@ public class ImageProcessor {
                 }
             }
         }
-        CommonUtils.DeleteCameraImage(context,imageUri);
+        CommonUtils.DeleteCameraImage(ci.getContext(),ci.getImageUri());
         return detectedShape;
     }
     private List<MatOfPoint> GetContourMatPointList(){
@@ -78,7 +68,7 @@ public class ImageProcessor {
     }
 
     private Mat ApplyImageFilters(){
-        Mat image = Imgcodecs.imread(filePath, Imgcodecs.IMREAD_COLOR);
+        Mat image = Imgcodecs.imread(ci.getFilePath(), Imgcodecs.IMREAD_COLOR);
         int width = image.width();
         int height = image.height();
         if (width > 0 && height > 0 && !image.empty()) {
@@ -89,4 +79,58 @@ public class ImageProcessor {
         return image;
     }
 
+    public String getDominantColorInCameraImg(){
+        Bitmap bitmap = ci.getBitmap(); //assign your bitmap here
+        int redColors = 0;
+        int greenColors = 0;
+        int blueColors = 0;
+        int pixelCount = 0;
+
+        for (int y = 0; y < bitmap.getHeight(); y++)
+        {
+            for (int x = 0; x < bitmap.getWidth(); x++)
+            {
+                int c = bitmap.getPixel(x, y);
+                pixelCount++;
+                redColors += Color.red(c);
+                greenColors += Color.green(c);
+                blueColors += Color.blue(c);
+            }
+        }
+        // calculate average of bitmap r,g,b values
+        int red = (redColors/pixelCount);
+        int green = (greenColors/pixelCount);
+        int blue = (blueColors/pixelCount);
+        String dominantColor = null;
+
+        if(red > green && red > blue)
+            dominantColor = "Red";
+        else if (green > red && green > blue)
+            dominantColor = "Green";
+        else
+            dominantColor = "Blue";
+
+        return  dominantColor;
+    }
+
+    //Used in Google Cloud API
+    public static Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
+
+        int originalWidth = bitmap.getWidth();
+        int originalHeight = bitmap.getHeight();
+        int resizedWidth = maxDimension;
+        int resizedHeight = maxDimension;
+
+        if (originalHeight > originalWidth) {
+            resizedHeight = maxDimension;
+            resizedWidth = (int) (resizedHeight * (float) originalWidth / (float) originalHeight);
+        } else if (originalWidth > originalHeight) {
+            resizedWidth = maxDimension;
+            resizedHeight = (int) (resizedWidth * (float) originalHeight / (float) originalWidth);
+        } else if (originalHeight == originalWidth) {
+            resizedHeight = maxDimension;
+            resizedWidth = maxDimension;
+        }
+        return Bitmap.createScaledBitmap(bitmap, resizedWidth, resizedHeight, false);
+    }
 }

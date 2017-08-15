@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                                 this,
                                 CAMERA_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                    
+
                     Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
                 }
             }catch(Exception se){
