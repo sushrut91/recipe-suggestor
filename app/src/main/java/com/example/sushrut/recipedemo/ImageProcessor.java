@@ -33,6 +33,7 @@ public class ImageProcessor {
     public String DetectShapes(){
         String detectedShape = null;
         List<MatOfPoint> contourList = GetContourMatPointList();
+        ci.setNoOfContours(contourList.size());
         List<MatOfPoint2f> contourList2f = new ArrayList<MatOfPoint2f>();
         if(contourList != null){
             for(MatOfPoint c : contourList)
@@ -41,6 +42,8 @@ public class ImageProcessor {
                 contourList2f.add(point);
             }
             for(MatOfPoint2f mop :contourList2f ){
+                //set shape vertices count
+                ci.setShapeVertices(mop.size().height);
                 double arcLen = Imgproc.arcLength(mop,true);
                 Imgproc.approxPolyDP(mop,mop,0.04 * arcLen,true);
                 //1x4 format

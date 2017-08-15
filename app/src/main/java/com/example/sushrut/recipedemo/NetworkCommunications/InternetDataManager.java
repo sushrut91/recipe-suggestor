@@ -12,6 +12,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.sushrut.recipedemo.BuildConfig;
 import com.example.sushrut.recipedemo.RecipeCall;
+import com.example.sushrut.recipedemo.VisualIngredient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +34,16 @@ public class InternetDataManager {
 
     public InternetDataManager(BuildConfig config){
         this.RECIPE_API_KEY = config.RECIPE_API_KEY;
+    }
+
+    public JSONArray getDetectedIngredients(VisualIngredient vi)
+    {
+        return null;
+    }
+
+    public  void sendVisualIngredient(VisualIngredient vi)
+    {
+
     }
 
     public JSONArray getRecipesByIngredient(String ingredients)

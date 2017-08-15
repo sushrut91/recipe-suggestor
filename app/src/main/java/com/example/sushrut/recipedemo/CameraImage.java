@@ -16,6 +16,52 @@ public class CameraImage {
     int redVal;
     int greenVal;
     int blueVal;
+    double shapeVertices;
+    private String cusiene;
+    private int userSuggestedUseFrequency;
+
+    private String userSuggestedName;
+
+    public String getCusiene() {
+        return cusiene;
+    }
+
+    public void setCusiene(String cusiene) {
+        this.cusiene = cusiene;
+    }
+    public String getUserSuggestedName() {
+        return userSuggestedName;
+    }
+
+    public void setUserSuggestedName(String userSuggestedName) {
+        this.userSuggestedName = userSuggestedName;
+    }
+
+    public int getUserSuggestedUseFrequency() {
+        return userSuggestedUseFrequency;
+    }
+
+    public void setUserSuggestedUseFrequency(int userSuggestedUseFrequency) {
+        this.userSuggestedUseFrequency = userSuggestedUseFrequency;
+    }
+
+    public double getShapeVertices() {
+        return shapeVertices;
+    }
+
+    public void setShapeVertices(double shapeVertices) {
+        this.shapeVertices = shapeVertices;
+    }
+
+    public int getNoOfContours() {
+        return noOfContours;
+    }
+
+    public void setNoOfContours(int noOfContours) {
+        this.noOfContours = noOfContours;
+    }
+
+    int noOfContours;
     Context context = null;
     String filePath = null;
 

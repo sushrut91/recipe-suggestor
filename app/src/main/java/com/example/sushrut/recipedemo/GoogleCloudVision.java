@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.util.Log;
 
+import com.example.sushrut.recipedemo.Models.GoogleImage;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpTransport;
@@ -37,7 +38,7 @@ import java.util.logging.Logger;
  * Created by Sushrut on 8/6/2017.
  */
 
-public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredient>>{
+public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
 
     private static String CLOUD_VISION_API_KEY = null;
     private static final String TAG = "GoogleCloudVision";
@@ -58,7 +59,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
         this.CLOUD_VISION_API_KEY = BuildConfig.GOOGLE_CV_KEY;
     }
 
-    public List<VisualIngredient> uploadImageToGoogleCloud(Uri uri, ContentResolver contentResolver) throws IOException {
+    public GoogleImage uploadImageToGoogleCloud(Uri uri, ContentResolver contentResolver) throws IOException {
         if (uri != null) {
                 // scale the image to save on bandwidth
                  bmp = ImageProcessor.scaleBitmapDown(
@@ -72,7 +73,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
         }
     }
     // Get Visual Ingredient flourished with google data
-    private List<VisualIngredient> getGoogleVisualIngredients(Bitmap bmp) throws IOException
+    private GoogleImage getGoogleVisualIngredients(Bitmap bmp) throws IOException
     {
         Log.d(TAG,"Getting visual ingridients.");
         return doInBackground();
@@ -82,8 +83,8 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
     }
 
     @Override
-    protected List<VisualIngredient> doInBackground(Void ... params) {
-        List<VisualIngredient> googleIngredients = new ArrayList<VisualIngredient>(4);
+    protected GoogleImage doInBackground(Void ... params) {
+        GoogleImage gi = new GoogleImage();
         try {
             HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
@@ -155,21 +156,20 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
             //Added to check. Uncomment the above line to make things work
             //List<AnnotateImageResponse> responses = response.getResponses();
             responses = response.getResponses();
-                    for (AnnotateImageResponse res : responses) {
 
+                    for (AnnotateImageResponse res : responses) {
                         // For full list of available annotations, see http://g.co/cloud/vision/docs
                         DominantColorsAnnotation colors = res.getImagePropertiesAnnotation().getDominantColors();
                         for (ColorInfo color : colors.getColors()) {
-                            googleIngredients.add(
-                                    new VisualIngredient(color.getColor().getRed()
-                                    , color.getColor().getGreen(), color.getColor().getBlue(),
-                                            getRecognizedObjects(response))
-
-
-                            );
+                            gi.setRedVal(color.getColor().getRed());
+                            gi.setGreenVal(color.getColor().getGreen());
+                            gi.setBlueVal(color.getColor().getBlue());
+                            gi.setDominantColor(color.getColor().toString());
                         }
                     }
-            //return GetRecoginzedObjects(response);
+
+             gi.setCloudVisionSuggestions(getRecognizedObjects(response));
+
         } catch (GoogleJsonResponseException e) {
             Log.d(activitySimpleName, "failed to make API request because " + e.getContent());
         } catch (IOException e) {
@@ -178,7 +178,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<VisualIngredie
         }
 
         //Create customized object
-        return googleIngredients;
+        return gi;
     }
 
     private HashMap<String,Float> getRecognizedObjects(BatchAnnotateImagesResponse response) {

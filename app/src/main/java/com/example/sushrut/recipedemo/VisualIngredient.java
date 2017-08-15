@@ -14,7 +14,7 @@ public class VisualIngredient {
     private String dominantColor;
     private String googleDominantColor;
     private String contourShape;
-    private int shapeVertices;
+    private double shapeVertices;
     private String cuisine;
     private int noOfContours;
     private HashMap<String,Float> googleSuggestions;
@@ -26,12 +26,7 @@ public class VisualIngredient {
     private Float googleBlueVal;
     private int useFrequencyRating;
 
-    public VisualIngredient(Float googleRedVal, Float googleGreenVal, Float googleBlueVal,
-                            HashMap<String,Float> googleSuggestions){
-        this.googleRedVal = googleRedVal;
-        this.googleGreenVal = googleGreenVal;
-        this.googleBlueVal = googleBlueVal;
-        this.googleSuggestions = googleSuggestions;
+    public VisualIngredient(){
     }
 
     public String getGoogleSuggestedName() {
@@ -66,11 +61,11 @@ public class VisualIngredient {
         this.contourShape = contourShape;
     }
 
-    public int getShapeVertices() {
+    public double getShapeVertices() {
         return shapeVertices;
     }
 
-    public void setShapeVertices(int shapeVertices) {
+    public void setShapeVertices(double shapeVertices) {
         this.shapeVertices = shapeVertices;
     }
 
