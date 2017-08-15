@@ -40,44 +40,7 @@ public class RecipeCall extends AppCompatActivity {
         callAPIBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Instantiate the RequestQueue.
-                RequestQueue queue = Volley.newRequestQueue(RecipeCall.this);
-                String url ="https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?"+recipeTxt.getText();
 
-// Request a string response from the provided URL.
-                final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                // Display the first 500 characters of the response string.
-                                //recipeTxt.setText("Response is: "+ response.substring(0,500));
-                                try{
-                                    JSONObject obj = new JSONObject(response);
-                                    recipeTxt.setText(obj.getJSONArray("results").getJSONObject(0).getString("title"));
-                                }
-                                catch(JSONException ex){
-                                    recipeTxt.setText(ex.getMessage());
-                                }
-
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        recipeTxt.setText("That didn't work!");
-                    }
-                    }){
-                    @Override
-                    public Map<String, String> getHeaders() throws AuthFailureError {
-                        //Map<String,String> params =  super.getHeaders();
-                        Map<String,String> params =  new HashMap<>();
-                        if(params==null)params = new HashMap<>();
-                        params.put("X-Mashape-Authorization", RECIPE_API_KEY);
-                        //..add other headers
-                        return params;
-                    }
-                };
-// Add the request to the RequestQueue.
-                queue.add(stringRequest);
             }
         });
     }
