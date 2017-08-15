@@ -12,7 +12,7 @@ import com.example.sushrut.recipedemo.VisualIngredient;
 
 public class VisualIngredientBuilder {
     //void changes to VisualIngredient In Future
-    public VisualIngredient CreateVisualIngredient(ImageProcessor ip, GoogleCloudVision gcv
+    public VisualIngredient BuildVisualIngredient(ImageProcessor ip, GoogleCloudVision gcv
             , CameraImage ci, GoogleImage gi){
 
 

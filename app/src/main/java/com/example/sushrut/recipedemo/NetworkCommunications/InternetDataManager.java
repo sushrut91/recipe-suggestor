@@ -36,15 +36,6 @@ public class InternetDataManager {
         this.RECIPE_API_KEY = config.RECIPE_API_KEY;
     }
 
-    public JSONArray getDetectedIngredients(VisualIngredient vi)
-    {
-        return null;
-    }
-
-    public  void sendVisualIngredient(VisualIngredient vi)
-    {
-
-    }
 
     public JSONArray getRecipesByIngredient(String ingredients)
     {
