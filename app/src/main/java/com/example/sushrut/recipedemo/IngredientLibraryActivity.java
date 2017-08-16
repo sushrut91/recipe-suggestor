@@ -3,37 +3,37 @@ package com.example.sushrut.recipedemo;
 import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
-import org.opencv.android.OpenCVLoader;
+public class IngredientLibraryActivity extends AppCompatActivity {
+    private static final String TAG=IngredientLibraryActivity.class.getSimpleName();
 
-
-public class MainActivity extends AppCompatActivity {
-    public static final String TAG=MainActivity.class.getSimpleName();
     private static final int PICK_IMAGE_ACTIVITY = 1;
     private static final int CAMERA_ACTIVITY = 2;
-
-    static {
-        if(!OpenCVLoader.initDebug()){
-            Log.d(TAG, "OpenCV not loaded");
-        } else {
-            Log.d(TAG, "OpenCV loaded");
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_ingredient_library);
 
-        FloatingActionButton choiceFab = (FloatingActionButton)findViewById(R.id.choiceActionBtn);
-        choiceFab.setOnClickListener(new View.OnClickListener(){
+        Button cameraBtn = (Button)findViewById(R.id.cameraBtn);
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startCamera();
+            }
+        });
+
+        Button pickImgBtn = (Button)findViewById(R.id.pickImgBtn);
+        pickImgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -43,37 +43,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton cameraFab = (FloatingActionButton)findViewById(R.id.cameraActionButton);
-        cameraFab.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                startCamera();
-            }
-        });
 
-        FloatingActionButton recipeBrowseFab = (FloatingActionButton)findViewById(R.id.recipeBrowseBtn);
-        recipeBrowseFab.setOnClickListener(new View.OnClickListener(){
+        Button saveBtn = (Button)findViewById(R.id.saveBtn);
+        saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent recipeIntent = new Intent(MainActivity.this,RecipeCall.class);
-                MainActivity.this.startActivity(recipeIntent);
 
             }
         });
 
-        FloatingActionButton addToLibFab = (FloatingActionButton)findViewById(R.id.addToLibraryBtn);
-        addToLibFab.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent ingredientIntent = new Intent(MainActivity.this,IngredientLibraryActivity.class);
-                MainActivity.this.startActivity(ingredientIntent);
-            }
-        });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        ImageView ingredientImgView = (ImageView) findViewById(R.id.ingredientImgView);
         if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             Uri tempUri = data.getData();
             try{
@@ -105,12 +89,14 @@ public class MainActivity extends AppCompatActivity {
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
                     Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
+                    ingredientImgView.setImageBitmap(capturedImg);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
             }
         }
     }
+
 
     private void startCamera()
     {

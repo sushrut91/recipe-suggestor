@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+    tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
     android:orientation="vertical">
 
     <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,7 +12,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="20dp">
@@ -39,7 +39,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="20dp">
@@ -68,7 +68,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary">
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity">
 
         <TextView
             android:id="@+id/useFrequencyTxtView"
@@ -114,7 +114,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="20dp">
@@ -126,7 +126,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="20dp"
