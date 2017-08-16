@@ -34,33 +34,33 @@
             android:inputType="textPersonName" />
 
         </android.widget.LinearLayout>
-    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <android.widget.LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
-        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity">
 
         <TextView
             android:id="@+id/cuisineTxtView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1.51"
             android:layout_marginLeft="20dp"
+            android:layout_weight="1.48"
             android:text="@string/cuisineName" />
 
         <EditText
             android:id="@+id/cuisineTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.55"
+            android:layout_weight="0.42"
             android:ems="10"
             android:inputType="textPersonName" />
 
     </android.widget.LinearLayout>
+
     <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
