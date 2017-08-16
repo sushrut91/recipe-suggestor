@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Visual Recipe</string>
+    <string name="app_name">Camera Cookbook</string>
     <string name="image_picker_error">Error uploading image</string>
     <string name="loading_message">Loading Results...</string>
     <string name="camera">Camera</string>
     <string name="selectImage">Select Image</string>
-    <string name="browseRecipe">Browse Recepies</string>
-    <string name="addToLibrary">Add To Library</string>
+    <string name="browseRecipes">Recipes</string>
+    <string name="addToCookbook">Add To Cookbook</string>
 </resources>

@@ -1,149 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.sushrut.recipedemo.MainActivity">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/cameraActionButton"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="97dp"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        tools:context="com.example.sushrut.recipedemo.MainActivity">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/choiceActionBtn"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:clickable="true"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_input_add"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.21"
-        android:layout_marginRight="97dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="1.0" />
+        <TextView
+            android:id="@+id/cameraLblTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/camera" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addToLibraryBtn"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:clickable="true"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/ic_menu_save"
-        android:layout_marginLeft="97dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.62"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/pickImgTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="45dp"
+            android:text="@string/selectImage" />
+    </android.widget.LinearLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/recipeBrowseBtn"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:clickable="true"
-        app:fabSize="normal"
-        app:srcCompat="@android:drawable/btn_plus"
-        android:layout_marginLeft="97dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.62"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.widget.LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:context="com.example.sushrut.recipedemo.MainActivity">
 
-    <TextView
-        android:id="@+id/cameraTxtView"
-        android:layout_width="68dp"
-        android:layout_height="22dp"
-        android:gravity="center"
-        android:text="@string/camera"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.296"
-        app:layout_constraintVertical_bias="0.35" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cameraActionButton"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <TextView
-        android:id="@+id/choiceTxtView"
-        android:layout_width="68dp"
-        android:layout_height="22dp"
-        android:text="@string/selectImage"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/choiceActionBtn" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/choiceActionBtn"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
 
-    <TextView
-        android:id="@+id/addToLibraryTxtView"
-        android:layout_width="68dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="140dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/addToLibrary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addToLibraryBtn"
-        app:layout_constraintVertical_bias="0.0" />
+    </android.widget.LinearLayout>
 
-    <TextView
-        android:id="@+id/recipeBrowseTxtView"
-        android:layout_width="68dp"
-        android:layout_height="25dp"
-        android:text="@string/browseRecipe"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.295"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintTop_toBottomOf="@+id/recipeBrowseBtn" />
+    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        tools:context="com.example.sushrut.recipedemo.MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/LibraryLblTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:text="@string/addToCookbook" />
+
+        <TextView
+            android:id="@+id/browserRecipeTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/browseRecipes" />
+
+    </android.widget.LinearLayout>
+
+    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:context="com.example.sushrut.recipedemo.MainActivity">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addToLibraryBtn"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/recipeBrowseBtn"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </android.widget.LinearLayout>
+
+</android.widget.LinearLayout>
+
