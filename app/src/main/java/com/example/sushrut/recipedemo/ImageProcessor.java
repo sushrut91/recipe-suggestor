@@ -27,6 +27,7 @@ public class ImageProcessor {
     private static final String TAG = "ImageProcessor";
     private CameraImage ci = null;
 
+    public ImageProcessor(){}
     public ImageProcessor(CameraImage ci){
         this.ci = ci;
     }

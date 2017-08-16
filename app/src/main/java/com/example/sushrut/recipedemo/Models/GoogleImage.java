@@ -11,11 +11,11 @@ public class GoogleImage {
     private Float greenVal;
     private Float blueVal;
     private HashMap<String,Float> cloudVisionSuggestions;
-
     public String getGoogleSuggestedName() {
         return googleSuggestedName;
     }
 
+    public GoogleImage(){}
     public void setGoogleSuggestedName(String googleSuggestedName) {
         this.googleSuggestedName = googleSuggestedName;
     }

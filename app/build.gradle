@@ -12,6 +12,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "GOOGLE_CV_KEY", getApiKey("google.cv")
         buildConfigField "String", "RECIPE_API_KEY", getApiKey("recipe.api")
+        buildConfigField "String", "SERVER_API_KEY", getApiKey("server.api")
     }
     buildTypes {
         release {

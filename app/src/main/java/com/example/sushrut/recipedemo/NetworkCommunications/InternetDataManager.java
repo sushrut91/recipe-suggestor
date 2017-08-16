@@ -28,17 +28,59 @@ import java.util.Map;
 public class InternetDataManager {
     private final String TAG = "InternetDataManager";
     private String RECIPE_API_KEY = null;
+    private String SERVER_API_KEY = null;
     private Context context = null;
     private JSONArray responseJsonArray = null;
+    private JSONObject responseJSONObj = null;
     public String url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients";
+    public String server_url = "";
 
     public InternetDataManager(BuildConfig config){
         this.RECIPE_API_KEY = config.RECIPE_API_KEY;
+        this.SERVER_API_KEY = config.SERVER_API_KEY;
     }
 
+    public JSONObject sendVisualIngredient(VisualIngredient vi){
+        RequestQueue queue = Volley.newRequestQueue(context);
+// Request a string response from the provided URL.
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, this.url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Display the first 500 characters of the response string.
+                        //recipeTxt.setText("Response is: "+ response.substring(0,500));
+                        try{
+                            JSONObject obj = new JSONObject(response);
+                            responseJSONObj = obj;
+                            //recipeTxt.setText(obj.getJSONArray("results").getJSONObject(0).getString("title"));
+                        }
+                        catch(JSONException ex){
+                            Log.d(TAG, "onResponse: " +ex.getMessage());
+                        }
 
-    public JSONArray getRecipesByIngredient(String ingredients)
-    {
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                responseJsonArray.put(error);
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                //Map<String,String> params =  super.getHeaders();
+                Map<String,String> params =  new HashMap<>();
+                if(params==null)params = new HashMap<>();
+                params.put("X-Mashape-Authorization", RECIPE_API_KEY);
+                //..add other headers
+                return params;
+            }
+        };
+// Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+        return responseJSONObj;
+    }
+    public JSONArray getRecipesByIngredient(String ingredients) {
         url = url +"?"+ ingredients.trim();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(context);
