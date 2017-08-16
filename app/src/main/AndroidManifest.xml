@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RecipeCall" />
-        <activity android:name=".IngredientLibrary"></activity>
+        <activity android:name=".IngredientLibrary" android:label="@string/addIngredientTitle"></activity>
     </application>
 
 </manifest>

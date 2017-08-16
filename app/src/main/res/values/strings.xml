@@ -1,4 +1,5 @@
 <resources>
+    //Home Screen Activity
     <string name="app_name">Camera Cookbook</string>
     <string name="image_picker_error">Error uploading image</string>
     <string name="loading_message">Loading Results...</string>
@@ -6,4 +7,17 @@
     <string name="selectImage">Select Image</string>
     <string name="browseRecipes">Recipes</string>
     <string name="addToCookbook">Add To Cookbook</string>
+
+    //Add Ingredient Activity
+    <string name="addIngredientTitle">Add Ingredient</string>
+    <string name="ingredientName">Ingredient Name</string>
+    <string name="cuisineName">Cuisine</string>
+    <string name="useFrequency">Use Frequency</string>
+    <string name="useFrequencyHigh">High</string>
+    <string name="useFrequencyLow">Low</string>
+    <string name="cameraBtnTxt">Camera</string>
+    <string name="pickImgBtnTxt">Pick Image</string>
+    <string name="saveBtnTxt">Save</string>
+
+
 </resources>

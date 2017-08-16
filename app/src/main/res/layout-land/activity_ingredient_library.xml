@@ -48,7 +48,7 @@
             android:id="@+id/cuisineTxtView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1.51"
+            android:layout_weight="0.79"
             android:layout_marginLeft="20dp"
             android:text="@string/cuisineName" />
 
@@ -61,58 +61,65 @@
             android:inputType="textPersonName" />
 
     </android.widget.LinearLayout>
-    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+
+    <android.widget.LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
-        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibrary">
 
         <TextView
             android:id="@+id/useFrequencyTxtView"
-            android:layout_width="115dp"
+            android:layout_width="234dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:text="@string/useFrequency"/>
+            android:text="@string/useFrequency" />
+
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
             <RadioButton
                 android:id="@+id/lowFrequencyRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/useFrequencyLow"/>
+                android:text="@string/useFrequencyLow" />
+
             <RadioButton
                 android:id="@+id/highFrequencyRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/useFrequencyHigh"/>
+                android:text="@string/useFrequencyHigh" />
         </RadioGroup>
-    </android.widget.LinearLayout>
-    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/cameraBtn"
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cameraBtnTxt" />
 
         <Button
             android:id="@+id/pickImgBtn"
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pickImgBtnTxt"/>
+            android:text="@string/pickImgBtnTxt" />
+    </android.widget.LinearLayout>
+
+    <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.sushrut.recipedemo.IngredientLibrary"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+
     </android.widget.LinearLayout>
     <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -127,10 +134,9 @@
 
         <ImageView
             android:id="@+id/ingredientImgView"
-            android:layout_width="wrap_content"
-            android:layout_height="144dp"
-            app:srcCompat="@mipmap/ic_launcher"
-            android:layout_weight="0.62" />
+            android:layout_width="170dp"
+            android:layout_height="88dp"
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <Button
             android:id="@+id/saveBtn"
