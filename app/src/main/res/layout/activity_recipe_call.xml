@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
     <EditText
-        android:id="@+id/recipeTxt"
+        android:id="@+id/recipeSearchTxt"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"

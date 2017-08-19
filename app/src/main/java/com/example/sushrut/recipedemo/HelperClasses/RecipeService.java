@@ -1,10 +1,15 @@
 package com.example.sushrut.recipedemo.HelperClasses;
 
+import com.example.sushrut.recipedemo.Models.RecipeModel;
 import com.example.sushrut.recipedemo.NetworkCommunications.InternetDataManager;
 import com.example.sushrut.recipedemo.R;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Sushrut on 8/15/2017.
@@ -21,11 +26,27 @@ public class RecipeService {
         this.idm = idm;
     }
 
-    public JSONArray getRecipesByName (String searchString){
-        return idm.getJSONFromRecipeApi(searchString, findByRecipeNameURL);
+    public List<RecipeModel> getRecipesByName (String searchString) throws JSONException{
+        List<RecipeModel> recipeList = new ArrayList<>();
+        JSONArray receivedArray = idm.getJSONFromRecipeApi(searchString, findByRecipeNameURL);
+        for(int i = 0 ; i<receivedArray.length();i++){
+           recipeList.add( new RecipeModel(
+                Integer.parseInt(receivedArray.getJSONObject(i).get("id").toString()),
+                    receivedArray.getJSONObject(i).get("title").toString()
+            ));
+        }
+        return  recipeList;
     }
 
-    public JSONArray getRecipesByIngredients(String ingredients){
-        return idm.getJSONFromRecipeApi(ingredients,findByIngredientsURL);
+    public  List<RecipeModel> getRecipesByIngredients(String ingredients) throws JSONException{
+        List<RecipeModel> recipeList = new ArrayList<>();
+        JSONArray receivedArray = idm.getJSONFromRecipeApi(ingredients, findByRecipeNameURL);
+        for(int i = 0 ; i<receivedArray.length();i++){
+            recipeList.add( new RecipeModel(
+                    Integer.parseInt(receivedArray.getJSONObject(i).get("id").toString()),
+                    receivedArray.getJSONObject(i).get("title").toString()
+            ));
+        }
+        return  recipeList;
     }
 }

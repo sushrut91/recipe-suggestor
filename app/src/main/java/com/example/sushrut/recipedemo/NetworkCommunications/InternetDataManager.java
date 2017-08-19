@@ -39,10 +39,10 @@ public class InternetDataManager {
         this.SERVER_API_KEY = config.SERVER_API_KEY;
     }
 
-    public JSONObject sendVisualIngredient(VisualIngredient vi, String url){
+    public JSONObject sendVisualIngredient(VisualIngredient vi){
         RequestQueue queue = Volley.newRequestQueue(context);
 // Request a string response from the provided URL.
-        final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, server_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
