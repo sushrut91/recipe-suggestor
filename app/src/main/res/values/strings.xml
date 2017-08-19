@@ -23,4 +23,7 @@
     <string name="searchRecipe">Search Recipe</string>
 
 
+    //String query urls
+    <string name="findByIngredientsURL"> https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?</string>
+    <string name="findByRecipeNameURL"></string>
 </resources>

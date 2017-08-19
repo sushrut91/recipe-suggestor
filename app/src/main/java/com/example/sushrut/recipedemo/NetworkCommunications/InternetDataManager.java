@@ -32,7 +32,6 @@ public class InternetDataManager {
     private Context context = null;
     private JSONArray responseJsonArray = null;
     private JSONObject responseJSONObj = null;
-    public String url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients";
     public String server_url = "";
 
     public InternetDataManager(BuildConfig config){
@@ -40,10 +39,10 @@ public class InternetDataManager {
         this.SERVER_API_KEY = config.SERVER_API_KEY;
     }
 
-    public JSONObject sendVisualIngredient(VisualIngredient vi){
+    public JSONObject sendVisualIngredient(VisualIngredient vi, String url){
         RequestQueue queue = Volley.newRequestQueue(context);
 // Request a string response from the provided URL.
-        final StringRequest stringRequest = new StringRequest(Request.Method.GET, this.url,
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -80,12 +79,12 @@ public class InternetDataManager {
 
         return responseJSONObj;
     }
-    public JSONArray getRecipesByIngredient(String ingredients) {
-        url = url +"?"+ ingredients.trim();
+    public JSONArray getJSONFromRecipeApi(String params, String url) {
+        params = params.trim();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(context);
 // Request a string response from the provided URL.
-        final StringRequest stringRequest = new StringRequest(Request.Method.GET, this.url,
+        final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
