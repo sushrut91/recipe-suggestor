@@ -24,24 +24,10 @@ import java.util.Map;
 
 public class RecipeCall extends AppCompatActivity {
     public static final String url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients";
-    private EditText ingridientTxt;
-    private Button callAPIBtn;
-    private TextView recipeTxt;
-    private static final String RECIPE_API_KEY="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_call);
-        ingridientTxt = (EditText)findViewById(R.id.ingridientTxt);
-        callAPIBtn =(Button)findViewById(R.id.callApiBtn);
-        recipeTxt = (TextView)findViewById(R.id.recipeTxtView);
-
-        callAPIBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 }

@@ -19,5 +19,8 @@
     <string name="pickImgBtnTxt">Pick Image</string>
     <string name="saveBtnTxt">Save</string>
 
+    //Browse Recipe Activity
+    <string name="searchRecipe">Search Recipe</string>
+
 
 </resources>
