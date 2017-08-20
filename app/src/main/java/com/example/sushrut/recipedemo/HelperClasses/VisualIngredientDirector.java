@@ -1,5 +1,7 @@
 package com.example.sushrut.recipedemo.HelperClasses;
 
+import android.content.Context;
+
 import com.example.sushrut.recipedemo.BuildConfig;
 import com.example.sushrut.recipedemo.CameraImage;
 import com.example.sushrut.recipedemo.GoogleCloudVision;
@@ -20,9 +22,10 @@ public class VisualIngredientDirector {
     private VisualIngredientBuilder builder = null;
     private ImageProcessor ip = null;
     private GoogleCloudVision gcv = null;
+    private Context context = null;
 
-    public VisualIngredientDirector(VisualIngredientViewModel vivm){
-        idm = new InternetDataManager(new BuildConfig());
+    public VisualIngredientDirector(VisualIngredientViewModel vivm, Context context){
+        idm = new InternetDataManager(new BuildConfig(),context);
         builder = new VisualIngredientBuilder();
         ip = new ImageProcessor();
         gcv = new GoogleCloudVision(vivm.getPackageName(),vivm.getPm(),

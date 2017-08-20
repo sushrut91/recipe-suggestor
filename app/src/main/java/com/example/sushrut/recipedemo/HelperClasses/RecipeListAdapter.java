@@ -22,8 +22,8 @@ import java.util.List;
 
 public class RecipeListAdapter extends ArrayAdapter<RecipeModel> {
     List<RecipeModel> recipies = null;
-    public RecipeListAdapter(Context context, int resource, List<RecipeModel> objects){
-        super(context,resource,objects);
+    public RecipeListAdapter(Context context, int resource, int resource2, List<RecipeModel> objects){
+        super(context,resource,resource2,objects);
         recipies = objects;
     }
 
