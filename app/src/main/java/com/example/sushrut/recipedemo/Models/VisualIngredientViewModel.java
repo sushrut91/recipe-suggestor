@@ -23,9 +23,8 @@ public class VisualIngredientViewModel {
     private Uri imgUri;
     private Context appContext;
 
-    public VisualIngredientViewModel(String IngredientName, Bitmap bmp, String packageName,
+    public VisualIngredientViewModel(Bitmap bmp, String packageName,
                                      PackageManager pm, String activitySimpleName, Uri imgUri, Context appContext){
-        this.IngredientName = IngredientName;
         this.bmp = bmp;
         this.packageName = packageName;
         this.pm = pm;

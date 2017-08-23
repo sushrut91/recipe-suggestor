@@ -1,7 +1,9 @@
 package com.example.sushrut.recipedemo;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,6 +12,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+
+import com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector;
+import com.example.sushrut.recipedemo.Models.VisualIngredientViewModel;
 
 import org.opencv.android.OpenCVLoader;
 
@@ -72,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
-            Uri tempUri = data.getData();
-            try{
+        Uri tempUri = null;
+        Bitmap capturedImg = null;
+        try{
+            if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
                 if (PermissionUtils.requestPermission(
                         this,
                         PICK_IMAGE_ACTIVITY,
@@ -84,16 +89,12 @@ public class MainActivity extends AppCompatActivity {
                                 this,
                                 PICK_IMAGE_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
+                    tempUri = data.getData();
+                    capturedImg = (Bitmap)data.getExtras().get("data");
                 }
-            }catch(Exception se){
-                Log.d(TAG, se.getMessage());
             }
-        }
-        else if ( requestCode == CAMERA_ACTIVITY && resultCode == RESULT_OK && data != null){
-            //uploadImageFromCamera(data);
-            Uri tempUri = data.getData();
-            try{
+            else if ( requestCode == CAMERA_ACTIVITY && resultCode == RESULT_OK && data != null){
+                tempUri = data.getData();
                 if (PermissionUtils.requestPermission(
                         this,
                         CAMERA_ACTIVITY,
@@ -103,11 +104,19 @@ public class MainActivity extends AppCompatActivity {
                                 CAMERA_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                    Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
+                    capturedImg = (Bitmap)data.getExtras().get("data");
                 }
-            }catch(Exception se){
-                Log.d(TAG, se.getMessage());
             }
+
+            //Create and send visual ingredient
+            VisualIngredientViewModel vivm = new VisualIngredientViewModel(capturedImg, getPackageName(),
+                    getPackageManager(), TAG, tempUri, getApplicationContext());
+            VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
+            VisualIngredient vi = vid.createVisualIngredient(vivm);
+            vid.sendVisualIngredient(vi);
+
+        }catch(Exception ex){
+            Log.d(TAG, "Error: " + ex.getMessage());
         }
     }
 

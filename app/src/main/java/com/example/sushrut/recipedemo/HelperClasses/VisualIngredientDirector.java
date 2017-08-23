@@ -11,6 +11,9 @@ import com.example.sushrut.recipedemo.Models.VisualIngredientViewModel;
 import com.example.sushrut.recipedemo.NetworkCommunications.InternetDataManager;
 import com.example.sushrut.recipedemo.VisualIngredient;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.net.URISyntaxException;
 
 /**
@@ -39,7 +42,8 @@ public class VisualIngredientDirector {
         return  vi;
     }
 
-    public void sendVisualIngredient(VisualIngredient vi) {
-        idm.sendVisualIngredient(vi);
+    public void sendVisualIngredient(VisualIngredient vi) throws JSONException{
+        JSONObject json = builder.BuildVisualIngredientJSON(vi);
+        idm.sendJSONToServer(json);
     }
 }

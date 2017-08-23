@@ -41,7 +41,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 
-public class RecipeCall extends AppCompatActivity{
+public class RecipeCall extends AppCompatActivity {
     private static final String TAG ="RecipeSearch";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +60,6 @@ public class RecipeCall extends AppCompatActivity{
                     RecipeService recipeService = new RecipeService(new InternetDataManager(new BuildConfig()
                             ,getApplicationContext()));
                     getJSONFromRecipeApi(recipeSearchTxt.getText().toString(),rs.getFindByRecipeNameURL(),rs);
-
-
-
                 }catch (JSONException je){
                     Log.d(TAG, je.getMessage());
                 }
@@ -72,8 +69,11 @@ public class RecipeCall extends AppCompatActivity{
     }
 
     private void getJSONFromRecipeApi(String params, String url, RecipeService rs) throws JSONException{
-        System.out.println("Entered getJSONFromRecipeAPI");
-        final List<RecipeModel> recipies = new ArrayList<RecipeModel>();
+        final List<RecipeModel> recipes = new ArrayList<RecipeModel>();
+        final RecipeListAdapter rla = new RecipeListAdapter(getApplicationContext(),
+                R.layout.listitem,R.id.recipeNameTxt,recipes);
+        recipes.clear();
+        rla.notifyDataSetChanged();
         params = params.trim();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -94,14 +94,15 @@ public class RecipeCall extends AppCompatActivity{
                                 int id = Integer.parseInt(recipe.getString("id"));
                                 String title = recipe.getString("title");
                                 String img = recipe.getString("imageUrls");
+                                String cookingTime = recipe.getString("readyInMinutes");
                                 Drawable dimg = new BitmapDrawable(img);
-                                RecipeModel rm = new RecipeModel(id,title);
+                                RecipeModel rm = new RecipeModel(id,title,cookingTime);
                                 rm.setRecipeImage(dimg);
-                                recipies.add(rm);
+                                recipes.add(rm);
                             }
                         //new ArrayAdapter<String>(this, R.layout.a_layout_file,
                           //      R.id.the_id_of_a_textview_from_the_layout, this.file)
-                            RecipeListAdapter rla = new RecipeListAdapter(getApplicationContext(),R.layout.listitem,R.id.recipeNameTxt,recipies);
+
                             ListView recipeListView = (ListView) findViewById(R.id.recipeListView);
                             recipeListView.setAdapter(rla);
                                 //recipeTxt.setText(obj.getJSONArray("results").getJSONObject(0).getString("title"));

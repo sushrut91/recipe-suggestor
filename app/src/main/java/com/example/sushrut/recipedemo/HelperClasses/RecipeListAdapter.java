@@ -21,10 +21,10 @@ import java.util.List;
  */
 
 public class RecipeListAdapter extends ArrayAdapter<RecipeModel> {
-    List<RecipeModel> recipies = null;
-    public RecipeListAdapter(Context context, int resource, int resource2, List<RecipeModel> objects){
-        super(context,resource,resource2,objects);
-        recipies = objects;
+    private List<RecipeModel> recipes = null;
+    public RecipeListAdapter(Context context, int resource, int resourceTxt, List<RecipeModel> objects){
+        super(context,resource,resourceTxt,objects);
+        recipes = objects;
     }
 
     @NonNull
@@ -32,10 +32,13 @@ public class RecipeListAdapter extends ArrayAdapter<RecipeModel> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listitem,parent,false);
-            RecipeModel recipe = recipies.get(position);
+            RecipeModel recipe = recipes.get(position);
 
             TextView nameText = (TextView)convertView.findViewById(R.id.recipeNameTxt);
-            nameText.setText(recipe.getRecipeTitle());
+            nameText.setText(recipe.getRecipeTitle().toString());
+
+            TextView cookingTimeText = (TextView)convertView.findViewById(R.id.cookingTimeTxt);
+            nameText.setText("Ready in " + recipe.getCookingTime().toString() +" mins");
 
             ImageView recipeImgView = (ImageView)convertView.findViewById(R.id.recipeImg);
             Drawable recipeImgDrawable = recipe.getRecipeImage();
