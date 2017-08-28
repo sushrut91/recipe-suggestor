@@ -65,12 +65,6 @@ public class CameraImage {
     Context context = null;
     String filePath = null;
 
-    public CameraImage(Context context ,Uri imageUri) throws URISyntaxException {
-        this.context = context;
-        this.imageUri = imageUri;
-        this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
-    }
-
     public CameraImage(Context context,Uri imageUri ,Bitmap capturedImage) throws URISyntaxException {
         this.context = context;
         this.imageUri = imageUri;

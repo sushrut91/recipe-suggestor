@@ -14,7 +14,9 @@ import com.example.sushrut.recipedemo.VisualIngredient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 
 /**
  * Created by Sushrut on 8/15/2017.
@@ -35,15 +37,20 @@ public class VisualIngredientDirector {
                 vivm.getActivitySimpleName(),vivm.getBmp());
     }
 
-    public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException{
+    public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException{
         VisualIngredient vi = null;
-         vi = builder.BuildVisualIngredient(ip,gcv,new CameraImage(vivm.getAppContext()
-                ,vivm.getImgUri()), new GoogleImage());
+        CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
+        GoogleImage gi = gcv.uploadImageToGoogleCloud(vivm.getImgUri(),vivm.getContentResolver());
+        ip.setCameraImage(ci);
+        ip.setAverageColors();
+        vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
         return  vi;
     }
 
     public void sendVisualIngredient(VisualIngredient vi) throws JSONException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
-        idm.sendJSONToServer(json);
+        HashMap<String,String> headers = new HashMap<String,String>();
+        headers.put("Content-Type","application/json");
+        idm.sendJSONToServer(json,"saveIngredient",headers);
     }
 }

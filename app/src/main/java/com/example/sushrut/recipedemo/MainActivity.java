@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Create and send visual ingredient
             VisualIngredientViewModel vivm = new VisualIngredientViewModel(capturedImg, getPackageName(),
-                    getPackageManager(), TAG, tempUri, getApplicationContext());
+                    getPackageManager(), TAG, tempUri, getApplicationContext(),getContentResolver());
             VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
             VisualIngredient vi = vid.createVisualIngredient(vivm);
             vid.sendVisualIngredient(vi);

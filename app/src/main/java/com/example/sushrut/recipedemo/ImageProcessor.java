@@ -28,7 +28,7 @@ public class ImageProcessor {
     private CameraImage ci = null;
 
     public ImageProcessor(){}
-    public ImageProcessor(CameraImage ci){
+    public void setCameraImage(CameraImage ci){
         this.ci = ci;
     }
     public String DetectShapes(){
@@ -117,6 +117,32 @@ public class ImageProcessor {
         return  dominantColor;
     }
 
+    public void setAverageColors(){
+        Bitmap bitmap = ci.getBitmap(); //assign your bitmap here
+        int redColors = 0;
+        int greenColors = 0;
+        int blueColors = 0;
+        int pixelCount = 0;
+
+        for (int y = 0; y < bitmap.getHeight(); y++)
+        {
+            for (int x = 0; x < bitmap.getWidth(); x++)
+            {
+                int c = bitmap.getPixel(x, y);
+                pixelCount++;
+                redColors += Color.red(c);
+                greenColors += Color.green(c);
+                blueColors += Color.blue(c);
+            }
+        }
+        // calculate average of bitmap r,g,b values
+        int red = (redColors/pixelCount);
+        int green = (greenColors/pixelCount);
+        int blue = (blueColors/pixelCount);
+        ci.setRedVal(red);
+        ci.setGreenVal(green);
+        ci.setBlueVal(blue);
+    }
     //Used in Google Cloud API
     public static Bitmap scaleBitmapDown(Bitmap bitmap, int maxDimension) {
 

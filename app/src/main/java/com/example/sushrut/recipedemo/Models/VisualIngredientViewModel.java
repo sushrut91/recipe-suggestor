@@ -1,11 +1,10 @@
 package com.example.sushrut.recipedemo.Models;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
-
-import com.example.sushrut.recipedemo.CameraImage;
 
 /**
  * Created by Sushrut on 8/16/2017.
@@ -20,17 +19,24 @@ public class VisualIngredientViewModel {
     private String activitySimpleName;
     private PackageManager pm;
 
+    public ContentResolver getContentResolver() {
+        return contentResolver;
+    }
+
+    private ContentResolver contentResolver;
     private Uri imgUri;
     private Context appContext;
 
     public VisualIngredientViewModel(Bitmap bmp, String packageName,
-                                     PackageManager pm, String activitySimpleName, Uri imgUri, Context appContext){
+                                     PackageManager pm, String activitySimpleName,
+                                     Uri imgUri, Context appContext, ContentResolver contentResolver){
         this.bmp = bmp;
         this.packageName = packageName;
         this.pm = pm;
         this.activitySimpleName = activitySimpleName;
         this.imgUri = imgUri;
         this.appContext = appContext;
+        this.contentResolver = contentResolver;
     }
 
     public Uri getImgUri() {

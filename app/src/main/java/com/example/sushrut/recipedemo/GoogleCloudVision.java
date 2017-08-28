@@ -78,9 +78,9 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
         Log.d(TAG,"Getting visual ingridients.");
         return doInBackground();
     }
-    public List<AnnotateImageResponse> getResponsesList(){
-        return this.responses;
-    }
+    //public List<AnnotateImageResponse> getResponsesList(){
+     //   return this.responses;
+    //}
 
     @Override
     protected GoogleImage doInBackground(Void ... params) {
