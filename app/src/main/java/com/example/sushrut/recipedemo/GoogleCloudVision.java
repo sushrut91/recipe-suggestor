@@ -38,7 +38,7 @@ import java.util.logging.Logger;
  * Created by Sushrut on 8/6/2017.
  */
 
-public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
+public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageResponse>>{
 
     private static String CLOUD_VISION_API_KEY = null;
     private static final String TAG = "GoogleCloudVision";
@@ -48,6 +48,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
     private PackageManager packageManager = null;
     private String activitySimpleName = null;
     private Bitmap bmp = null;
+    GoogleImage gi = new GoogleImage();
     //Responses contain details from Cloud Vision
     private List<AnnotateImageResponse> responses = null;
 
@@ -59,32 +60,9 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
         this.CLOUD_VISION_API_KEY = BuildConfig.GOOGLE_CV_KEY;
     }
 
-    public GoogleImage uploadImageToGoogleCloud(Uri uri, ContentResolver contentResolver) throws IOException {
-        if (uri != null) {
-                // scale the image to save on bandwidth
-                 bmp = ImageProcessor.scaleBitmapDown(
-                                MediaStore.Images.Media.getBitmap(contentResolver, uri),
-                                1200);
-
-                return getGoogleVisualIngredients(bmp);
-        } else {
-            Log.d(TAG, "Image picker gave us a null image.");
-            return  null;
-        }
-    }
-    // Get Visual Ingredient flourished with google data
-    private GoogleImage getGoogleVisualIngredients(Bitmap bmp) throws IOException
-    {
-        Log.d(TAG,"Getting visual ingridients.");
-        return doInBackground();
-    }
-    //public List<AnnotateImageResponse> getResponsesList(){
-     //   return this.responses;
-    //}
 
     @Override
-    protected GoogleImage doInBackground(Void ... params) {
-        GoogleImage gi = new GoogleImage();
+    protected List<AnnotateImageResponse> doInBackground(Void ... params) {
         try {
             HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
@@ -156,7 +134,6 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
             //Added to check. Uncomment the above line to make things work
             //List<AnnotateImageResponse> responses = response.getResponses();
             responses = response.getResponses();
-
                     for (AnnotateImageResponse res : responses) {
                         // For full list of available annotations, see http://g.co/cloud/vision/docs
                         DominantColorsAnnotation colors = res.getImagePropertiesAnnotation().getDominantColors();
@@ -176,11 +153,17 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, GoogleImage>{
             Log.d(activitySimpleName, "failed to make API request because of other IOException " +
                     e.getMessage());
         }
-
-        //Create customized object
-        return gi;
+        return null;
     }
 
+    @Override
+    protected void onPostExecute(List<AnnotateImageResponse> response) {
+        getFinalGoogleImage();
+    }
+
+    public GoogleImage getFinalGoogleImage(){
+        return this.gi;
+    }
     private HashMap<String,Float> getRecognizedObjects(BatchAnnotateImagesResponse response) {
         HashMap<String,Float> recoginizedObjects = new HashMap<String,Float>();
         List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();

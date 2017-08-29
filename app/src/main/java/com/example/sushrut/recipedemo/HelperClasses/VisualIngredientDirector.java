@@ -40,9 +40,10 @@ public class VisualIngredientDirector {
     public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException{
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
-        GoogleImage gi = gcv.uploadImageToGoogleCloud(vivm.getImgUri(),vivm.getContentResolver());
         ip.setCameraImage(ci);
         ip.setAverageColors();
+        gcv.execute();
+        GoogleImage gi = gcv.getFinalGoogleImage();
         vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
         return  vi;
     }
