@@ -59,7 +59,7 @@ public class VisualIngredientBuilder {
         json.put("google_red_value",vi.getGoogleRedVal());
         json.put("google_green_value",vi.getGoogleGreenVal());
         json.put("google_blue_value",vi.getGoogleBlueVal());
-        json.put("google_suggestions",vi.getGoogleSuggestions());
+        json.put("google_suggestions",vi.getGoogleSuggestions().toString());
         return json;
     }
 }

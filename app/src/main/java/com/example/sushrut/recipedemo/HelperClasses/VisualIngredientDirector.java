@@ -44,10 +44,12 @@ public class VisualIngredientDirector {
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
         ci.setUserSuggestedName(vivm.getIngredientName());
+        ci.setCusiene(vivm.getCuisine());
         ip.setCameraImage(ci);
         ip.setAverageColors();
         gcv.execute();
         GoogleImage gi = gcv.getFinalGoogleImage();
+        gi.setDominantColor(ip.getDominantColorInCameraImg());
         //Wait for google to do its processing
         while(true){
             if(gi.getCloudVisionSuggestions() != null)
