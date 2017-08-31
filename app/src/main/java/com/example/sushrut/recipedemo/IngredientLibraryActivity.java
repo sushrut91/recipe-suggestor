@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector;
@@ -71,12 +72,12 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                         VisualIngredientViewModel vivm = new VisualIngredientViewModel(bmpImg, getPackageName(),
                                 getPackageManager(), TAG, imageUri, getApplicationContext(),getContentResolver());
 
-                        EditText cuisineTxt = (EditText)findViewById(R.id.cuisineTxt);
                         EditText ingredientNameTxt = (EditText)findViewById(R.id.ingredientNameTxt);
                         RadioButton lowFrequencyRadio = (RadioButton) findViewById(R.id.lowFrequencyRadio);
+                        Spinner cuisineSpinner = (Spinner)findViewById(R.id.cuisineSpinner);
 
                         if(CommonUtils.isValidStringInput(ingredientNameTxt.getText().toString())){
-                            vivm.setCuisene(cuisineTxt.getText().toString());
+                            vivm.setCuisene(cuisineSpinner.getSelectedItem().toString());
                             vivm.setIngredientName(ingredientNameTxt.getText().toString());
                             if(lowFrequencyRadio.isChecked())
                                 vivm.setUseFrequency(0);

@@ -12,6 +12,7 @@
     <string name="addIngredientTitle">Add Ingredient</string>
     <string name="ingredientName">Ingredient Name</string>
     <string name="cuisineName">Cuisine</string>
+    <string name="cuisinePrompt">Select a Cuisine</string>
     <string name="useFrequency">Use Frequency</string>
     <string name="useFrequencyHigh">High</string>
     <string name="useFrequencyLow">Low</string>
@@ -26,4 +27,12 @@
     //String query urls
     <string name="findByIngredientsURL"> https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?</string>
     <string name="findByRecipeNameURL"></string>
+
+    //Cuisines
+    <string-array name="cuisine_array">
+        <item>Indian</item>
+        <item>South Indian</item>
+        <item>Chinese</item>
+        <item>Italian</item>
+    </string-array>
 </resources>
