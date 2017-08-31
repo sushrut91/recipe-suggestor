@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.sushrut.recipedemo.IngredientLibraryActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/mainLinearLayout">
 
     <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -78,6 +79,7 @@
             android:layout_marginLeft="20dp"
             android:text="@string/useFrequency"/>
         <RadioGroup
+            android:id="@+id/frequencyRadioGrp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <RadioButton
@@ -127,7 +129,7 @@
 
         <ImageView
             android:id="@+id/ingredientImgView"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="144dp"
             app:srcCompat="@mipmap/ic_launcher"
             android:layout_weight="0.62" />

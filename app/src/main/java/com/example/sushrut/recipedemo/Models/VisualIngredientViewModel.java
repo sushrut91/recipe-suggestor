@@ -12,7 +12,7 @@ import android.net.Uri;
 
 public class VisualIngredientViewModel {
     private String IngredientName;
-    private String cuisene;
+    private String cuisine;
     private Bitmap bmp;
     private int useFrequency;
     private String packageName;
@@ -88,12 +88,12 @@ public class VisualIngredientViewModel {
         IngredientName = ingredientName;
     }
 
-    public String getCuisene() {
-        return cuisene;
+    public String getCuisine() {
+        return cuisine;
     }
 
-    public void setCuisene(String cuisene) {
-        this.cuisene = cuisene;
+    public void setCuisene(String cuisine) {
+        this.cuisine = cuisine;
     }
 
     public Bitmap getBmp() {

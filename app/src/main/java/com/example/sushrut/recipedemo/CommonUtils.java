@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.net.URISyntaxException;
+import java.util.regex.Pattern;
 
 /**
  * Created by Sushrut on 8/7/2017.
@@ -92,12 +93,14 @@ public class CommonUtils {
         return bmp;
     }
 
-    public static void CreateCompressedBitmap(File file){
-
-    }
-
     public static void DeleteCameraImage(Context appContext, Uri uri) {
         appContext.getContentResolver().delete(uri, null,
                 null);
+    }
+
+    public static boolean isValidStringInput(String input){
+        Pattern strPattern = Pattern.compile("[A-Za-z ]*");
+        boolean result = strPattern.matcher(input).find();
+        return result;
     }
 }

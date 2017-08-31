@@ -12,7 +12,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector;
 import com.example.sushrut.recipedemo.Models.VisualIngredientViewModel;
@@ -66,9 +70,25 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                     if(img.getDrawable() != null && imageUri != null){
                         VisualIngredientViewModel vivm = new VisualIngredientViewModel(bmpImg, getPackageName(),
                                 getPackageManager(), TAG, imageUri, getApplicationContext(),getContentResolver());
-                        VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
-                        VisualIngredient vi = vid.createVisualIngredient(vivm);
-                        //vid.sendVisualIngredient(vi);
+
+                        EditText cuisineTxt = (EditText)findViewById(R.id.cuisineTxt);
+                        EditText ingredientNameTxt = (EditText)findViewById(R.id.ingredientNameTxt);
+                        RadioButton lowFrequencyRadio = (RadioButton) findViewById(R.id.lowFrequencyRadio);
+
+                        if(CommonUtils.isValidStringInput(ingredientNameTxt.getText().toString())){
+                            vivm.setCuisene(cuisineTxt.getText().toString());
+                            vivm.setIngredientName(ingredientNameTxt.getText().toString());
+                            if(lowFrequencyRadio.isChecked())
+                                vivm.setUseFrequency(0);
+                            else
+                                vivm.setUseFrequency(1);
+
+                            VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
+                            //This also sends the ingredient
+                            vid.createVisualIngredient(vivm);
+                        } else{
+                            Toast.makeText(getApplicationContext(),"Ingredient name can contain alphabets only",Toast.LENGTH_SHORT);
+                        }
 
                     }else{
                         Snackbar.make(v,"Please pick/capture an image and retry",Snackbar.LENGTH_SHORT);
@@ -76,15 +96,18 @@ public class IngredientLibraryActivity extends AppCompatActivity {
 
                 }catch (IOException io){
                     Log.d(TAG, "onClick: " + io.getMessage());
-                }
-                catch (ExecutionException ee){
-                    Log.d(TAG, "onClick: " + ee.getMessage());
-                }
-                catch (InterruptedException ie){
-                    Log.d(TAG, "onClick: " + ie.getMessage());
-                }
-                catch (URISyntaxException use){
-                    Log.d(TAG, "onClick: " +use.getMessage());
+                } catch (ExecutionException ee){
+                    Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                            "Please check your network connection",Snackbar.LENGTH_LONG).show();
+                } catch (InterruptedException ie){
+                    Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                            "Please check your network connection",Snackbar.LENGTH_LONG).show();
+                } catch (URISyntaxException use){
+                    Snackbar.make(findViewById(R.id.mainLinearLayout),"Error reading file. Please retry or select another."
+                           ,Snackbar.LENGTH_LONG).show();
+                } catch(JSONException je){
+                    Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                            "Please check your network connection",Snackbar.LENGTH_LONG).show();
                 }
             }
         });
@@ -150,4 +173,6 @@ public class IngredientLibraryActivity extends AppCompatActivity {
             startActivityForResult(cameraIntent, CAMERA_ACTIVITY);
         }
     }
+
+
 }

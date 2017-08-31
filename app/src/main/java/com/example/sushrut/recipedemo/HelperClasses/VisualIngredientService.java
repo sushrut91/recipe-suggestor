@@ -21,11 +21,7 @@ public class VisualIngredientService implements IVisualIngredient {
         this.director = director;
     }
     public void createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException, Exception{
-        VisualIngredient vi = director.createVisualIngredient(vivm);
-        if(vi!=null)
-            director.sendVisualIngredient(vi);
-        else
-            throw new Exception("Error creation VisualIngredient");
+       director.createVisualIngredient(vivm);
     }
     public List<VisualIngredient> getVisualIngredients(VisualIngredientViewModel vivm)
     {

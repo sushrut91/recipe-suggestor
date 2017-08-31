@@ -38,19 +38,26 @@ public class VisualIngredientDirector {
                 vivm.getActivitySimpleName(),vivm.getBmp());
     }
 
-    public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException,ExecutionException,InterruptedException
+    public void createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException,
+            ExecutionException,InterruptedException,JSONException
     {
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
+        ci.setUserSuggestedName(vivm.getIngredientName());
         ip.setCameraImage(ci);
         ip.setAverageColors();
-        gcv.execute().get();
+        gcv.execute();
         GoogleImage gi = gcv.getFinalGoogleImage();
+        //Wait for google to do its processing
+        while(true){
+            if(gi.getCloudVisionSuggestions() != null)
+                break;
+        }
         vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
-        return vi;
+        sendVisualIngredient(vi);
     }
 
-    public void sendVisualIngredient(VisualIngredient vi) throws JSONException{
+    private void sendVisualIngredient(VisualIngredient vi) throws JSONException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
         HashMap<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type","application/json");

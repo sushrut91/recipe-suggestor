@@ -109,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
             //Create and send visual ingredient
-            VisualIngredientViewModel vivm = new VisualIngredientViewModel(capturedImg, getPackageName(),
+            /*VisualIngredientViewModel vivm = new VisualIngredientViewModel(capturedImg, getPackageName(),
                     getPackageManager(), TAG, tempUri, getApplicationContext(),getContentResolver());
             VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
             VisualIngredient vi = vid.createVisualIngredient(vivm);
-            vid.sendVisualIngredient(vi);
+            vid.sendVisualIngredient(vi);*/
 
         }catch(Exception ex){
             Log.d(TAG, "Error: " + ex.getMessage());
