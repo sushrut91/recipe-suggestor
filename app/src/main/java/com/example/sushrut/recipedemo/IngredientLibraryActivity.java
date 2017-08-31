@@ -21,6 +21,9 @@ import org.json.JSONException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.concurrent.ExecutionException;
+
+import static com.example.sushrut.recipedemo.ImageProcessor.scaleBitmapDown;
 
 public class IngredientLibraryActivity extends AppCompatActivity {
     private static final String TAG=IngredientLibraryActivity.class.getSimpleName();
@@ -65,7 +68,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                                 getPackageManager(), TAG, imageUri, getApplicationContext(),getContentResolver());
                         VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
                         VisualIngredient vi = vid.createVisualIngredient(vivm);
-                        vid.sendVisualIngredient(vi);
+                        //vid.sendVisualIngredient(vi);
 
                     }else{
                         Snackbar.make(v,"Please pick/capture an image and retry",Snackbar.LENGTH_SHORT);
@@ -74,9 +77,13 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                 }catch (IOException io){
                     Log.d(TAG, "onClick: " + io.getMessage());
                 }
-                catch(JSONException je) {
-                    Log.d(TAG, "onClick: " + je.getMessage());
-                }catch (URISyntaxException use){
+                catch (ExecutionException ee){
+                    Log.d(TAG, "onClick: " + ee.getMessage());
+                }
+                catch (InterruptedException ie){
+                    Log.d(TAG, "onClick: " + ie.getMessage());
+                }
+                catch (URISyntaxException use){
                     Log.d(TAG, "onClick: " +use.getMessage());
                 }
             }
@@ -90,8 +97,9 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         ImageView ingredientImgView = (ImageView) findViewById(R.id.ingredientImgView);
         if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             imageUri = data.getData();
-            bmpImg = (Bitmap) data.getExtras().get("data");
             try{
+                bmpImg =(Bitmap)data.getExtras().get("data");
+                bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
                 if (PermissionUtils.requestPermission(
                         this,
                         PICK_IMAGE_ACTIVITY,
@@ -100,7 +108,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                                 this,
                                 PICK_IMAGE_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
+                    ingredientImgView.setImageBitmap(bmpImg);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
@@ -111,6 +119,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
             imageUri = data.getData();
             bmpImg = (Bitmap) data.getExtras().get("data");
             try{
+                bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
                 if (PermissionUtils.requestPermission(
                         this,
                         CAMERA_ACTIVITY,
@@ -120,8 +129,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                                 CAMERA_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                    Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
-                    ingredientImgView.setImageBitmap(capturedImg);
+                    //Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
+                    ingredientImgView.setImageBitmap(bmpImg);
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());

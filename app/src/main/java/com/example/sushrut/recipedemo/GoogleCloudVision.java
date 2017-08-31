@@ -32,13 +32,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
 
 /**
  * Created by Sushrut on 8/6/2017.
  */
 
-public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageResponse>>{
+public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
 
     private static String CLOUD_VISION_API_KEY = null;
     private static final String TAG = "GoogleCloudVision";
@@ -62,7 +63,9 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageR
 
 
     @Override
-    protected List<AnnotateImageResponse> doInBackground(Void ... params) {
+    protected Void doInBackground(Void ... params) {
+        final String packageName = this.packageName;
+        final PackageManager packageManager = this.packageManager;
         try {
             HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
             JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
@@ -77,6 +80,7 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageR
                         protected void initializeVisionRequest(VisionRequest<?> visionRequest)
                                 throws IOException {
                             super.initializeVisionRequest(visionRequest);
+
 
                             visionRequest.getRequestHeaders().set(ANDROID_PACKAGE_HEADER, packageName);
 
@@ -111,12 +115,14 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageR
                 // add the features we want
                 annotateImageRequest.setFeatures(new ArrayList<Feature>() {{
                     Feature labelDetection = new Feature();
-                    Feature textDetection = new Feature();
                     labelDetection.setType("LABEL_DETECTION");
-                    textDetection.setType("TEXT_DETECTION");
                     labelDetection.setMaxResults(10);
                     add(labelDetection);
-                    add(textDetection);
+
+                    Feature colorDetection = new Feature();
+                    colorDetection.setType("IMAGE_PROPERTIES");
+                    colorDetection.setMaxResults(10);
+                    add(colorDetection);
                 }});
 
                 // Add the list of one thing to the request
@@ -127,37 +133,33 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, List<AnnotateImageR
                     vision.images().annotate(batchAnnotateImagesRequest);
             // Due to a bug: requests to Vision API containing large images fail when GZipped.
             annotateRequest.setDisableGZipContent(true);
-            Log.d(activitySimpleName, "created Cloud Vision request object, sending request");
+            Log.d(TAG, "created Cloud Vision request object, sending request");
 
             BatchAnnotateImagesResponse response = annotateRequest.execute();
-            //return convertResponseToString(response);
-            //Added to check. Uncomment the above line to make things work
-            //List<AnnotateImageResponse> responses = response.getResponses();
-            responses = response.getResponses();
-                    for (AnnotateImageResponse res : responses) {
-                        // For full list of available annotations, see http://g.co/cloud/vision/docs
-                        DominantColorsAnnotation colors = res.getImagePropertiesAnnotation().getDominantColors();
-                        for (ColorInfo color : colors.getColors()) {
-                            gi.setRedVal(color.getColor().getRed());
-                            gi.setGreenVal(color.getColor().getGreen());
-                            gi.setBlueVal(color.getColor().getBlue());
-                            gi.setDominantColor(color.getColor().toString());
-                        }
-                    }
+            List<AnnotateImageResponse> responses = response.getResponses();
 
-             gi.setCloudVisionSuggestions(getRecognizedObjects(response));
-
-        } catch (GoogleJsonResponseException e) {
-            Log.d(activitySimpleName, "failed to make API request because " + e.getContent());
-        } catch (IOException e) {
-            Log.d(activitySimpleName, "failed to make API request because of other IOException " +
-                    e.getMessage());
+            for (AnnotateImageResponse res : responses) {
+                 // For full list of available annotations, see http://g.co/cloud/vision/docs
+                DominantColorsAnnotation colors = res.getImagePropertiesAnnotation().getDominantColors();
+                ColorInfo color = colors.getColors().get(0);
+                gi.setRedVal( color.getColor().getRed());
+                gi.setGreenVal(color.getColor().getGreen());
+                gi.setBlueVal(color.getColor().getBlue());
+                /*for (ColorInfo color : colors.getColors()) {
+                    gi.setRedVal( color.getColor().getRed());
+                    gi.setGreenVal(color.getColor().getGreen());
+                    gi.setBlueVal(color.getColor().getBlue());
+                }*/
+            }
+            gi.setCloudVisionSuggestions(getRecognizedObjects(response));
+        }catch (Exception e){
+            Log.d(TAG, "doInBackground: "+ e.getMessage());
         }
         return null;
     }
 
     @Override
-    protected void onPostExecute(List<AnnotateImageResponse> response) {
+    protected void onPostExecute(Void v) {
         getFinalGoogleImage();
     }
 

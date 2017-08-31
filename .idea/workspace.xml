@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
@@ -20,8 +20,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="RecipeDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,39 +56,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VisualIngredientDirector.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VisualIngredientDirector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="203">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleCloudVision.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GoogleCloudVision.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+            <state relative-caret-position="83">
+              <caret line="146" column="58" selection-start-line="146" selection-start-column="58" selection-end-line="146" selection-end-column="58" />
               <folding>
-                <element signature="e#7598#7599#0" expanded="true" />
-                <element signature="e#7635#7636#0" expanded="true" />
-                <element signature="e#7682#7683#0" expanded="true" />
-                <element signature="e#7712#7713#0" expanded="true" />
-                <element signature="method#getRecognizedObjects#0;class#GoogleCloudVision#0" expanded="false" />
+                <element signature="e#7422#7423#0" expanded="true" />
+                <element signature="e#7459#7460#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraImage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java">
+      <file leaf-file-name="VisualIngredientService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -94,8 +92,8 @@
       <file leaf-file-name="CommonUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CommonUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -104,8 +102,8 @@
       <file leaf-file-name="VisualIngredientBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="90" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="90" />
+            <state relative-caret-position="-272">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -114,11 +112,9 @@
       <file leaf-file-name="ImageProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="901">
               <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
               <folding>
-                <element signature="e#950#951#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
                 <element signature="method#DetectShapes#0;class#ImageProcessor#0" expanded="false" />
                 <element signature="method#GetContourMatPointList#0;class#ImageProcessor#0" expanded="false" />
                 <element signature="method#ApplyImageFilters#0;class#ImageProcessor#0" expanded="false" />
@@ -128,17 +124,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisualIngredientViewModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/VisualIngredientViewModel.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,18 +137,20 @@
       <file leaf-file-name="IngredientLibraryActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="91">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
+      <file leaf-file-name="Intent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/content/Intent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="112" column="99" selection-start-line="112" selection-start-column="99" selection-end-line="112" selection-end-column="99" />
+            <state relative-caret-position="17">
+              <caret line="5670" column="0" selection-start-line="5670" selection-start-column="0" selection-end-line="5670" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2809,7 +2802,6 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ingredient_library.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/GoogleImage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/sushrut/recipedemo/BuildConfig.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
@@ -2823,16 +2815,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listitem.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_call.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/VisualIngredientViewModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java" />
       </list>
     </option>
@@ -2869,9 +2862,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView">
@@ -2883,6 +2873,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -2903,7 +2896,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.example.sushrut.recipedemo" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="SearchEverywhereHistoryKey" value="strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Recipe&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/layout/activity_ingredient_library.xml&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Google&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;BuildVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientBuilder#BuildVisualIngredientJSON&#10;strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Recipe&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/layout/activity_ingredient_library.xml&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -3260,7 +3253,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3300,18 +3293,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="99" />
+      <option name="time" value="144" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/openCVLib330/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openCVLib330/src/main/java/org/opencv/android/OpenCVLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -3414,16 +3400,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
           <folding>
-            <element signature="e#668#686#0" expanded="true" />
+            <element signature="e#668#686#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/sushrut/recipedemo/BuildConfig.java">
@@ -3460,13 +3446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -3597,61 +3576,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/GoogleImage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
-          <folding>
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="method#DetectShapes#0;class#ImageProcessor#0" expanded="false" />
-            <element signature="method#GetContourMatPointList#0;class#ImageProcessor#0" expanded="false" />
-            <element signature="method#ApplyImageFilters#0;class#ImageProcessor#0" expanded="false" />
-            <element signature="method#scaleBitmapDown#0;class#ImageProcessor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="90" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="112" column="99" selection-start-line="112" selection-start-column="99" selection-end-line="112" selection-end-column="99" />
+        <state relative-caret-position="312">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3663,49 +3594,108 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/os/AsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="124">
           <caret line="565" column="53" selection-start-line="565" selection-start-column="53" selection-end-line="565" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/content/Intent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="5670" column="0" selection-start-line="5670" selection-start-column="0" selection-end-line="5670" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+          <folding>
+            <element signature="method#DetectShapes#0;class#ImageProcessor#0" expanded="false" />
+            <element signature="method#GetContourMatPointList#0;class#ImageProcessor#0" expanded="false" />
+            <element signature="method#ApplyImageFilters#0;class#ImageProcessor#0" expanded="false" />
+            <element signature="method#scaleBitmapDown#0;class#ImageProcessor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/GoogleImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+        <state relative-caret-position="83">
+          <caret line="146" column="58" selection-start-line="146" selection-start-column="58" selection-end-line="146" selection-end-column="58" />
           <folding>
-            <element signature="e#7598#7599#0" expanded="true" />
-            <element signature="e#7635#7636#0" expanded="true" />
-            <element signature="e#7682#7683#0" expanded="true" />
-            <element signature="e#7712#7713#0" expanded="true" />
-            <element signature="method#getRecognizedObjects#0;class#GoogleCloudVision#0" expanded="false" />
+            <element signature="e#7422#7423#0" expanded="true" />
+            <element signature="e#7459#7460#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

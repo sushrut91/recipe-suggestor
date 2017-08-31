@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by Sushrut on 8/15/2017.
@@ -37,15 +38,16 @@ public class VisualIngredientDirector {
                 vivm.getActivitySimpleName(),vivm.getBmp());
     }
 
-    public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException{
+    public VisualIngredient createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException,ExecutionException,InterruptedException
+    {
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
         ip.setCameraImage(ci);
         ip.setAverageColors();
-        gcv.execute();
+        gcv.execute().get();
         GoogleImage gi = gcv.getFinalGoogleImage();
         vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
-        return  vi;
+        return vi;
     }
 
     public void sendVisualIngredient(VisualIngredient vi) throws JSONException{
