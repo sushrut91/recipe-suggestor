@@ -39,7 +39,7 @@ import java.util.logging.Logger;
  * Created by Sushrut on 8/6/2017.
  */
 
-public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
+public class GoogleCloudVision {
 
     private static String CLOUD_VISION_API_KEY = null;
     private static final String TAG = "GoogleCloudVision";
@@ -62,8 +62,8 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
     }
 
 
-    @Override
-    protected Void doInBackground(Void ... params) {
+
+    public GoogleImage uploadCloudImg() {
         final String packageName = this.packageName;
         final PackageManager packageManager = this.packageManager;
         try {
@@ -116,12 +116,12 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
                 annotateImageRequest.setFeatures(new ArrayList<Feature>() {{
                     Feature labelDetection = new Feature();
                     labelDetection.setType("LABEL_DETECTION");
-                    labelDetection.setMaxResults(10);
+                    labelDetection.setMaxResults(2);
                     add(labelDetection);
 
                     Feature colorDetection = new Feature();
                     colorDetection.setType("IMAGE_PROPERTIES");
-                    colorDetection.setMaxResults(10);
+                    colorDetection.setMaxResults(2);
                     add(colorDetection);
                 }});
 
@@ -145,6 +145,14 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
                 gi.setRedVal( color.getColor().getRed());
                 gi.setGreenVal(color.getColor().getGreen());
                 gi.setBlueVal(color.getColor().getBlue());
+
+                if(color.getColor().getRed() > color.getColor().getGreen() && color.getColor().getRed() > color.getColor().getBlue()){
+                    gi.setDominantColor("red");
+                }else if(color.getColor().getGreen() > color.getColor().getRed() && color.getColor().getGreen() > color.getColor().getBlue()){
+                    gi.setDominantColor("green");
+                }else{
+                    gi.setDominantColor("blue");
+                }
                 /*for (ColorInfo color : colors.getColors()) {
                     gi.setRedVal( color.getColor().getRed());
                     gi.setGreenVal(color.getColor().getGreen());
@@ -155,14 +163,8 @@ public class GoogleCloudVision extends AsyncTask<Void, Void, Void>{
         }catch (Exception e){
             Log.d(TAG, "doInBackground: "+ e.getMessage());
         }
-        return null;
+        return gi;
     }
-
-    @Override
-    protected void onPostExecute(Void v) {
-        getFinalGoogleImage();
-    }
-
     public GoogleImage getFinalGoogleImage(){
         return this.gi;
     }

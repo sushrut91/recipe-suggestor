@@ -1,10 +1,14 @@
 package com.example.sushrut.recipedemo;
 
 import android.Manifest;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -66,7 +70,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+
                     ImageView img = (ImageView)findViewById(R.id.ingredientImgView);
                     if(img.getDrawable() != null && imageUri != null){
                         VisualIngredientViewModel vivm = new VisualIngredientViewModel(bmpImg, getPackageName(),
@@ -79,15 +83,14 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                         if(CommonUtils.isValidStringInput(ingredientNameTxt.getText().toString())){
                             vivm.setCuisene(cuisineSpinner.getSelectedItem().toString());
                             vivm.setIngredientName(ingredientNameTxt.getText().toString());
+                            vivm.setBmp(bmpImg);
                             if(lowFrequencyRadio.isChecked())
                                 vivm.setUseFrequency(0);
                             else
                                 vivm.setUseFrequency(1);
 
-                            VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
-                            //This also sends the ingredient
-                            vid.createVisualIngredient(vivm);
-                            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library.",Toast.LENGTH_SHORT);
+                           new BackgroundWork(vivm,getApplicationContext()).execute();
+
                         } else{
                             Toast.makeText(getApplicationContext(),"Ingredient name can contain alphabets only",Toast.LENGTH_SHORT);
                         }
@@ -96,7 +99,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                         Snackbar.make(v,"Please pick/capture an image and retry",Snackbar.LENGTH_SHORT);
                     }
 
-                }catch (IOException io){
+                /*}catch (IOException io){
                     Log.d(TAG, "onClick: " + io.getMessage());
                 } catch (ExecutionException ee){
                     Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
@@ -112,7 +115,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                             "Please check your network connection",Snackbar.LENGTH_LONG).show();
                 } catch(Exception ex){
                     Log.d(TAG, "onClick: " + ex.getMessage());
-                }
+                }*/
             }
         });
 
@@ -133,7 +136,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                         PermissionUtils.requestPermission(
                                 this,
                                 PICK_IMAGE_ACTIVITY,
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE))
+                {
                     bmpImg = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                     bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
                     ingredientImgView.setImageBitmap(bmpImg);
@@ -159,6 +163,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
 
                     //Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
                     ingredientImgView.setImageBitmap(bmpImg);
+
                 }
             }catch(Exception se){
                 Log.d(TAG, se.getMessage());
@@ -179,5 +184,58 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         }
     }
 
+    private class BackgroundWork extends AsyncTask<Void,Void,Void>{
+        private VisualIngredientViewModel vivm;
+        private Context appContext;
+        private ProgressDialog progDailog;
+        BackgroundWork(VisualIngredientViewModel vivm, Context appContext){
+            this.vivm = vivm;
+            this.appContext = appContext;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progDailog = new ProgressDialog(IngredientLibraryActivity.this);
+            progDailog.setMessage("Creating & Sending Ingredient to Cloud...");
+            progDailog.setIndeterminate(false);
+            progDailog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progDailog.setCancelable(true);
+            progDailog.show();
+        }
+        @Override
+        protected Void doInBackground(Void... params) {
+            try{
+                     VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
+                //This also sends the ingredient
+                    vid.createVisualIngredient(vivm);
+                }
+                catch (IOException io){
+                Log.d(TAG, "onClick: " + io.getMessage());
+                } catch (ExecutionException ee){
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
+            } catch (InterruptedException ie){
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
+            } catch (URISyntaxException use){
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error reading file. Please retry or select another."
+                        ,Snackbar.LENGTH_LONG).show();
+            } catch(JSONException je){
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
+                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
+            } catch(Exception ex){
+                Log.d(TAG, "onClick: " + ex.getMessage());
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library.",Toast.LENGTH_SHORT);
+            progDailog.dismiss();
+        }
+    }
 
 }

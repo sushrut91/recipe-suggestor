@@ -9,6 +9,8 @@ import com.example.sushrut.recipedemo.VisualIngredient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Map;
+
 /**
  * Created by Sushrut on 8/15/2017.
  */
@@ -34,6 +36,9 @@ public class VisualIngredientBuilder {
         vi.setGoogleBlueVal(gi.getBlueVal());
         vi.setGoogleSuggestions(gi.getCloudVisionSuggestions());
         vi.setGoogleSuggestedName(gi.getGoogleSuggestedName());
+        vi.setGoogleDominantColor(gi.getDominantColor());
+        Map.Entry<String,Float> entry =gi.getCloudVisionSuggestions().entrySet().iterator().next();
+        vi.setGoogleSuggestedName(entry.getKey().toString());
 
         //Set User provided properties
         vi.setUserSuggestedName(ci.getUserSuggestedName());

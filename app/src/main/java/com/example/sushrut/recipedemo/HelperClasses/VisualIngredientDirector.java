@@ -1,6 +1,7 @@
 package com.example.sushrut.recipedemo.HelperClasses;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.example.sushrut.recipedemo.BuildConfig;
 import com.example.sushrut.recipedemo.CameraImage;
@@ -29,6 +30,7 @@ public class VisualIngredientDirector {
     private ImageProcessor ip = null;
     private GoogleCloudVision gcv = null;
     private Context context = null;
+    private final String TAG="VID";
 
     public VisualIngredientDirector(VisualIngredientViewModel vivm, Context context){
         idm = new InternetDataManager(new BuildConfig(),context);
@@ -43,24 +45,31 @@ public class VisualIngredientDirector {
     {
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
+        Log.d(TAG, "CameraImg created");
         ci.setUserSuggestedName(vivm.getIngredientName());
+        ci.setBitmap(vivm.getBmp());
         ci.setCusiene(vivm.getCuisine());
         ip.setCameraImage(ci);
+        ci.setDominantColor(ip.getDominantColorInCameraImg());
+        ip.setCameraImage(ci);
         ip.setAverageColors();
-        gcv.execute();
-        GoogleImage gi = gcv.getFinalGoogleImage();
-        gi.setDominantColor(ip.getDominantColorInCameraImg());
+        Log.d(TAG, "Avg colours set");
+        GoogleImage gi = gcv.uploadCloudImg();
+        Log.d(TAG, "Got google img from cloud");
         //Wait for google to do its processing
-        while(true){
+        /*while(true){
+            Log.d(TAG, "In loop");
             if(gi.getCloudVisionSuggestions() != null)
                 break;
-        }
+        }*/
         vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
+        Log.d(TAG,"Sending data");
         sendVisualIngredient(vi);
     }
 
     private void sendVisualIngredient(VisualIngredient vi) throws JSONException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
+        Log.d(TAG, "sendVisualIngredient: " +json.toString());
         idm.sendJSONToServer(json,"saveIngredient");
     }
 }

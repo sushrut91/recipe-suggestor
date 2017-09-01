@@ -12,6 +12,9 @@ import java.net.URISyntaxException;
 
 public class CameraImage {
     private Uri imageUri = null;
+
+
+
     private Bitmap bitmap = null;
     int redVal;
     int greenVal;
@@ -19,8 +22,20 @@ public class CameraImage {
     double shapeVertices;
     private String cusiene;
     private int userSuggestedUseFrequency;
-
     private String userSuggestedName;
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
+    }
+    public String getDominantColor() {
+        return dominantColor;
+    }
+
+    public void setDominantColor(String dominantColor) {
+        this.dominantColor = dominantColor;
+    }
+
+    private String dominantColor;
 
     public String getCusiene() {
         return cusiene;
