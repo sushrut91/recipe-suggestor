@@ -16,12 +16,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
     </list>
     <ignored path="RecipeDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,23 +53,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VisualIngredientDirector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VisualIngredientDirector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-              <folding>
-                <element signature="e#2509#2524#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="714">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IngredientLibraryActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InternetDataManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeCall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1343">
+              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngredientLibraryActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+            <state relative-caret-position="537">
+              <caret line="131" column="69" selection-start-line="131" selection-start-column="69" selection-end-line="131" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,10 +95,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="VisualIngredientBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
+            <state relative-caret-position="918">
               <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
               <folding />
             </state>
@@ -2745,7 +2773,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_call.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java" />
@@ -2756,8 +2783,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ingredient_library.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
       </list>
     </option>
   </component>
@@ -2792,6 +2820,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2800,56 +2833,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecipeDemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecipeDemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecipeDemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipedemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2869,7 +2855,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.example.sushrut.recipedemo" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="SearchEverywhereHistoryKey" value="MainA&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;Google&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;BuildVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientBuilder#BuildVisualIngredientJSON&#10;strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Recipe&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/layout/activity_ingredient_library.xml&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
+    <property name="SearchEverywhereHistoryKey" value="PickIma&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.MainActivity#PICK_IMAGE_ACTIVITY&#10;Acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;Recipe&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java&#10;MainA&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;Google&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;BuildVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientBuilder#BuildVisualIngredientJSON&#10;strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/layout/activity_ingredient_library.xml&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -3226,8 +3212,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34568834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5201342" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3239,7 +3224,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3247,6 +3232,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34568834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -3265,16 +3251,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java</url>
-          <line>79</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java</url>
+          <line>91</line>
           <properties />
-          <option name="timeStamp" value="148" />
+          <option name="timeStamp" value="158" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="149" />
+      <option name="time" value="159" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3485,25 +3471,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-826">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3518,74 +3489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95149">
           <caret line="5670" column="0" selection-start-line="5670" selection-start-column="0" selection-end-line="5670" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#385022#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#39422#39423#0" expanded="false" />
-            <element signature="e#39454#39455#0" expanded="false" />
-            <element signature="e#39666#39667#0" expanded="false" />
-            <element signature="e#39709#39710#0" expanded="false" />
-            <element signature="e#226019#226020#0" expanded="false" />
-            <element signature="e#226058#226059#0" expanded="false" />
-            <element signature="e#226594#226595#0" expanded="false" />
-            <element signature="e#226640#226641#0" expanded="false" />
-            <element signature="e#227150#227151#0" expanded="false" />
-            <element signature="e#227183#227184#0" expanded="false" />
-            <element signature="e#271515#271516#0" expanded="false" />
-            <element signature="e#271545#271546#0" expanded="false" />
-            <element signature="e#271991#271992#0" expanded="false" />
-            <element signature="e#272019#272020#0" expanded="false" />
-            <element signature="e#272160#272161#0" expanded="false" />
-            <element signature="e#272222#272223#0" expanded="false" />
-            <element signature="e#272668#272669#0" expanded="false" />
-            <element signature="e#272731#272732#0" expanded="false" />
-            <element signature="e#273091#273092#0" expanded="false" />
-            <element signature="e#273119#273120#0" expanded="false" />
-            <element signature="e#273555#273556#0" expanded="false" />
-            <element signature="e#273619#273620#0" expanded="false" />
-            <element signature="e#275816#275817#0" expanded="false" />
-            <element signature="e#275850#275851#0" expanded="false" />
-            <element signature="e#276086#276087#0" expanded="false" />
-            <element signature="e#276118#276119#0" expanded="false" />
-            <element signature="e#276355#276356#0" expanded="false" />
-            <element signature="e#276387#276388#0" expanded="false" />
-            <element signature="e#276443#276444#0" expanded="false" />
-            <element signature="e#276482#276483#0" expanded="false" />
-            <element signature="e#277109#277110#0" expanded="false" />
-            <element signature="e#277176#277177#0" expanded="false" />
-            <element signature="e#277387#277388#0" expanded="false" />
-            <element signature="e#277457#277458#0" expanded="false" />
-            <element signature="e#278109#278110#0" expanded="false" />
-            <element signature="e#278152#278153#0" expanded="false" />
-            <element signature="e#293697#293698#0" expanded="false" />
-            <element signature="e#293726#293727#0" expanded="false" />
-            <element signature="e#294317#294318#0" expanded="false" />
-            <element signature="e#294348#294349#0" expanded="false" />
-            <element signature="e#294828#294829#0" expanded="false" />
-            <element signature="e#294861#294862#0" expanded="false" />
-            <element signature="e#295120#295121#0" expanded="false" />
-            <element signature="e#295156#295157#0" expanded="false" />
-            <element signature="e#302295#302296#0" expanded="false" />
-            <element signature="e#302349#302350#0" expanded="false" />
-            <element signature="e#304350#304351#0" expanded="false" />
-            <element signature="e#304405#304406#0" expanded="false" />
-            <element signature="e#311908#311909#0" expanded="false" />
-            <element signature="e#311940#311941#0" expanded="false" />
-            <element signature="e#352342#352343#0" expanded="false" />
-            <element signature="e#352380#352381#0" expanded="false" />
-            <element signature="e#352711#352712#0" expanded="false" />
-            <element signature="e#352751#352752#0" expanded="false" />
-            <element signature="e#358869#358870#0" expanded="false" />
-            <element signature="e#358900#358901#0" expanded="false" />
-            <element signature="e#365767#365768#0" expanded="false" />
-            <element signature="e#365840#365841#0" expanded="false" />
-            <element signature="e#367149#367150#0" expanded="false" />
-            <element signature="e#367194#367195#0" expanded="false" />
-            <element signature="e#367239#367240#0" expanded="false" />
-            <element signature="e#367286#367287#0" expanded="false" />
-            <element signature="e#367345#367346#0" expanded="false" />
-            <element signature="e#367379#367380#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3593,10 +3496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="e#329#330#0" expanded="false" />
-            <element signature="e#371#372#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3604,7 +3503,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3616,8 +3514,8 @@
         <state relative-caret-position="110">
           <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2389#2390#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2389#2390#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3626,15 +3524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-325">
           <caret line="146" column="58" selection-start-line="146" selection-start-column="58" selection-end-line="146" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3642,7 +3531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3663,7 +3551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3672,7 +3559,7 @@
         <state relative-caret-position="168">
           <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3689,7 +3576,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3701,7 +3587,7 @@
         <state relative-caret-position="184">
           <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
-            <element signature="e#2439#2462#0" expanded="true" />
+            <element signature="e#2439#2462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3713,7 +3599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="55" column="59" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3724,37 +3609,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-          <folding>
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="918">
           <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+        <state relative-caret-position="537">
+          <caret line="131" column="69" selection-start-line="131" selection-start-column="69" selection-end-line="131" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding>
-            <element signature="e#2509#2524#0" expanded="true" />
           </folding>
         </state>
       </provider>

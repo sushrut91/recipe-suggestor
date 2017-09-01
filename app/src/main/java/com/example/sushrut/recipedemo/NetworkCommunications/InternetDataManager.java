@@ -49,10 +49,8 @@ public class InternetDataManager {
         this.context = context;
     }
 
-    public void sendJSONToServer(JSONObject vi, String methodName , HashMap<String,String> tempHeaders) throws JSONException{
+    public void sendJSONToServer(JSONObject vi, String methodName) throws JSONException{
         //Add server_api key for authorization
-        tempHeaders.put("x-access-token",this.SERVER_API_KEY);
-        final HashMap<String,String> headers = tempHeaders;
         RequestQueue queue = Volley.newRequestQueue(context);
 // Request a string response from the provided URL.
         final JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,
@@ -77,12 +75,16 @@ public class InternetDataManager {
         }){
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
+
+                final HashMap<String,String> tempheaders = new HashMap<String,String>();
+                tempheaders.put("Content-Type", "application/json; charset=utf-8");
+                tempheaders.put("x-access-token",SERVER_API_KEY);
                 //Map<String,String> params =  super.getHeaders();
                 //Map<String,String> params =  new HashMap<>();
                 //if(params==null)params = new HashMap<>();
                 //params.put("X-Mashape-Authorization", SERVER_API_KEY);
                 //..add other headers
-                return headers;
+                return tempheaders;
                 //return params;
             }
         };

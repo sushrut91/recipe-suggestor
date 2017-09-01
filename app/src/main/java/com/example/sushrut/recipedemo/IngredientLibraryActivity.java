@@ -87,6 +87,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                             VisualIngredientDirector vid = new VisualIngredientDirector(vivm,getApplicationContext());
                             //This also sends the ingredient
                             vid.createVisualIngredient(vivm);
+                            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library.",Toast.LENGTH_SHORT);
                         } else{
                             Toast.makeText(getApplicationContext(),"Ingredient name can contain alphabets only",Toast.LENGTH_SHORT);
                         }
@@ -109,6 +110,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                 } catch(JSONException je){
                     Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
                             "Please check your network connection",Snackbar.LENGTH_LONG).show();
+                } catch(Exception ex){
+                    Log.d(TAG, "onClick: " + ex.getMessage());
                 }
             }
         });
@@ -122,8 +125,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             imageUri = data.getData();
             try{
-                bmpImg =(Bitmap)data.getExtras().get("data");
-                bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
+
                 if (PermissionUtils.requestPermission(
                         this,
                         PICK_IMAGE_ACTIVITY,
@@ -132,6 +134,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                                 this,
                                 PICK_IMAGE_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    bmpImg = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+                    bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
                     ingredientImgView.setImageBitmap(bmpImg);
                 }
             }catch(Exception se){

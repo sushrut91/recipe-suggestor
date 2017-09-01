@@ -61,8 +61,6 @@ public class VisualIngredientDirector {
 
     private void sendVisualIngredient(VisualIngredient vi) throws JSONException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
-        HashMap<String,String> headers = new HashMap<String,String>();
-        headers.put("Content-Type","application/json");
-        idm.sendJSONToServer(json,"saveIngredient",headers);
+        idm.sendJSONToServer(json,"saveIngredient");
     }
 }
