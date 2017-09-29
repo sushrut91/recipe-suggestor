@@ -29,6 +29,8 @@ public class VisualIngredientBuilder {
         vi.setContourShape(ip.DetectShapes());
         vi.setNoOfContours(ci.getNoOfContours());
         vi.setShapeVertices(ci.getShapeVertices());
+        vi.setDominantColor(ci.getDominantColor());
+        vi.setUseFrequencyRating(ci.getUserSuggestedUseFrequency());
 
         // Set GoogleImage properties
         vi.setGoogleRedVal(gi.getRedVal());

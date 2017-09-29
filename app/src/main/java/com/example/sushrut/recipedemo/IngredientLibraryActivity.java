@@ -70,7 +70,6 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     ImageView img = (ImageView)findViewById(R.id.ingredientImgView);
                     if(img.getDrawable() != null && imageUri != null){
                         VisualIngredientViewModel vivm = new VisualIngredientViewModel(bmpImg, getPackageName(),
@@ -127,16 +126,23 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         ImageView ingredientImgView = (ImageView) findViewById(R.id.ingredientImgView);
         if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             imageUri = data.getData();
+            this.grantUriPermission(getPackageName(), imageUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             try{
+                 boolean permissionTest = /*PermissionUtils.requestPermission(
+                         this,PICK_IMAGE_ACTIVITY,
+                         Manifest.permission.MANAGE_DOCUMENTS) &&*/
 
-                if (PermissionUtils.requestPermission(
-                        this,
-                        PICK_IMAGE_ACTIVITY,
-                        Manifest.permission.READ_EXTERNAL_STORAGE) &&
-                        PermissionUtils.requestPermission(
-                                this,
-                                PICK_IMAGE_ACTIVITY,
-                                Manifest.permission.WRITE_EXTERNAL_STORAGE))
+                         PermissionUtils.requestPermission(
+                         this,
+                         PICK_IMAGE_ACTIVITY,
+                         Manifest.permission.READ_EXTERNAL_STORAGE) &&
+
+                         PermissionUtils.requestPermission(
+                         this,
+                         PICK_IMAGE_ACTIVITY,
+                         Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+                if (permissionTest)
                 {
                     bmpImg = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                     bmpImg = scaleBitmapDown(MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri), 1200);
@@ -210,20 +216,11 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                 //This also sends the ingredient
                     vid.createVisualIngredient(vivm);
                 }
-                catch (IOException io){
-                Log.d(TAG, "onClick: " + io.getMessage());
-                } catch (ExecutionException ee){
+            catch (InterruptedException ie){
                 Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
-                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
-            } catch (InterruptedException ie){
-                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
-                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
-            } catch (URISyntaxException use){
-                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error reading file. Please retry or select another."
-                        ,Snackbar.LENGTH_LONG).show();
-            } catch(JSONException je){
-                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
-                        "Please check your network connection",Snackbar.LENGTH_LONG).show();
+                        "Error connecting to cloud server.Please check your network connection",Snackbar.LENGTH_LONG).show();
+            }  catch(JSONException je){
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"Error in data format.",Snackbar.LENGTH_LONG).show();
             } catch(Exception ex){
                 Log.d(TAG, "onClick: " + ex.getMessage());
             }

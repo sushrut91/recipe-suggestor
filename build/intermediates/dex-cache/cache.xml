@@ -3,24 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="8c26ab8d5cdf2afb1e463135a55608d265c9d436">
-        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\openCVLib330\build\intermediates\bundles\default\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="ac87e1d4ad141a042225f0f2184db41b4c02e03e">
-        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\debug\classes_f42adb3483124c4f3b2a30aebb3dd8fe0b1fe8ea.jar" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -29,13 +11,13 @@
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_eae8fca1b3659729d9ba33a9408e8f51ada9c938\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Sushrut\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
-        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\pre-dexed\debug\library-1.0.19_0dff159fdcb44515c4eb0d108f05e5d6977068d5.jar" />
+        sha1="cae18fe2c6bae08c64dda9ef37d22943d3384f1f">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
     </item>
 
 </items>

@@ -5,9 +5,11 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.RequestFuture;
@@ -24,6 +26,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.InterruptedIOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
@@ -41,7 +45,7 @@ public class InternetDataManager {
     private Context context = null;
     private JSONArray responseJsonArray = null;
     public String SERVER_URL = null;
-
+    private AppServerResponse appServerResponse = null;
 
     public InternetDataManager(BuildConfig config, Context context){
         this.SERVER_API_KEY = config.SERVER_API_KEY;
@@ -49,47 +53,74 @@ public class InternetDataManager {
         this.context = context;
     }
 
-    public void sendJSONToServer(JSONObject vi, String methodName) throws JSONException{
+    public AppServerResponse sendJSONToServer(JSONObject vi, String methodName) throws JSONException,NullPointerException{
         //Add server_api key for authorization
-        RequestQueue queue = Volley.newRequestQueue(context);
-// Request a string response from the provided URL.
-        final JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        // Display the first 500 characters of the response string.
-                        //recipeTxt.setText("Response is: "+ response.substring(0,500));
-                        try{
-                            Toast.makeText(context,response.getString(""),Toast.LENGTH_LONG);
-                        }
-                        catch(Exception ex){
-                            Log.d(TAG, "onResponse: " +ex.getMessage());
-                        }
+        final String requestBody = vi.toString();
+        appServerResponse = new AppServerResponse();
 
-                    }
-                }, new Response.ErrorListener() {
+        RequestQueue queue = Volley.newRequestQueue(context);
+        JsonObjectRequest JOPR = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,
+                new Response.Listener<JSONObject>(){
+            @Override
+            public void onResponse(JSONObject response){
+                try {
+                    Log.d(TAG, "onResponse: "+response.toString(4));
+                    appServerResponse.setMessage(response.toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    return;
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context,error.toString(),Toast.LENGTH_LONG);
+                Log.d(TAG, "onResponse: "+error.toString());
+                appServerResponse.setHttpStatusCode(error.networkResponse.statusCode);
+                appServerResponse.setMessage(error.getMessage());
+                return;
             }
         }){
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                //headers.put("Content-Type", "application/json");
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                headers.put("x-access-token",SERVER_API_KEY);
+                return headers;
+            }
 
-                final HashMap<String,String> tempheaders = new HashMap<String,String>();
-                tempheaders.put("Content-Type", "application/json; charset=utf-8");
-                tempheaders.put("x-access-token",SERVER_API_KEY);
-                //Map<String,String> params =  super.getHeaders();
-                //Map<String,String> params =  new HashMap<>();
-                //if(params==null)params = new HashMap<>();
-                //params.put("X-Mashape-Authorization", SERVER_API_KEY);
-                //..add other headers
-                return tempheaders;
-                //return params;
+
+            @Override
+            public byte[] getBody() {
+                try {
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException uee) {
+                    Log.d(TAG, "getBody: " +uee.getMessage());
+                    return null;
+                }
             }
         };
-// Add the request to the RequestQueue.
-        queue.add(jsonRequest);
+        JOPR.setRetryPolicy(new RetryPolicy() {
+            @Override
+            public int getCurrentTimeout() {
+                return 10000;
+            }
+
+            @Override
+            public int getCurrentRetryCount() {
+                return 1;
+            }
+
+            @Override
+            public void retry(VolleyError error) throws VolleyError{
+                Log.d(TAG, "retry: "+ error.getMessage());this.getCurrentRetryCount();
+                appServerResponse.setHttpStatusCode(error.networkResponse.statusCode);
+                appServerResponse.setMessage(error.getMessage());
+                return;
+            }
+        });
+        queue.add(JOPR);
+        return appServerResponse;
     }
 
 }

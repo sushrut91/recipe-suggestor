@@ -9,6 +9,7 @@ import com.example.sushrut.recipedemo.GoogleCloudVision;
 import com.example.sushrut.recipedemo.ImageProcessor;
 import com.example.sushrut.recipedemo.Models.GoogleImage;
 import com.example.sushrut.recipedemo.Models.VisualIngredientViewModel;
+import com.example.sushrut.recipedemo.NetworkCommunications.AppServerResponse;
 import com.example.sushrut.recipedemo.NetworkCommunications.InternetDataManager;
 import com.example.sushrut.recipedemo.VisualIngredient;
 
@@ -41,7 +42,7 @@ public class VisualIngredientDirector {
     }
 
     public void createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException,
-            ExecutionException,InterruptedException,JSONException
+            ExecutionException,InterruptedException,JSONException,NullPointerException
     {
         VisualIngredient vi = null;
         CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
@@ -49,6 +50,7 @@ public class VisualIngredientDirector {
         ci.setUserSuggestedName(vivm.getIngredientName());
         ci.setBitmap(vivm.getBmp());
         ci.setCusiene(vivm.getCuisine());
+        ci.setUserSuggestedUseFrequency(vivm.getUseFrequency());
         ip.setCameraImage(ci);
         ci.setDominantColor(ip.getDominantColorInCameraImg());
         ip.setCameraImage(ci);
@@ -67,9 +69,12 @@ public class VisualIngredientDirector {
         sendVisualIngredient(vi);
     }
 
-    private void sendVisualIngredient(VisualIngredient vi) throws JSONException{
+    private void sendVisualIngredient(VisualIngredient vi) throws JSONException,InterruptedException,NullPointerException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
         Log.d(TAG, "sendVisualIngredient: " +json.toString());
-        idm.sendJSONToServer(json,"saveIngredient");
+        AppServerResponse response = idm.sendJSONToServer(json,"saveIngredient");
+        if(response.getHttpStatusCode()!=200){
+            throw new InterruptedException(response.getMessage());
+        }
     }
 }
