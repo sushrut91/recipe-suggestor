@@ -230,7 +230,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library.",Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library."
+                    ,Toast.LENGTH_SHORT).show();
             progDailog.dismiss();
         }
     }

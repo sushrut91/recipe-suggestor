@@ -25,12 +25,13 @@ import java.util.concurrent.ExecutionException;
  * Created by Sushrut on 8/15/2017.
  */
 
-public class VisualIngredientDirector {
+public class VisualIngredientDirector implements Runnable{
     private InternetDataManager idm = null;
     private VisualIngredientBuilder builder = null;
     private ImageProcessor ip = null;
     private GoogleCloudVision gcv = null;
     private Context context = null;
+    private CameraImage ci = null;
     private final String TAG="VID";
 
     public VisualIngredientDirector(VisualIngredientViewModel vivm, Context context){
@@ -42,20 +43,21 @@ public class VisualIngredientDirector {
     }
 
     public void createVisualIngredient(VisualIngredientViewModel vivm) throws URISyntaxException,IOException,
-            ExecutionException,InterruptedException,JSONException,NullPointerException
+            ExecutionException,InterruptedException,JSONException
     {
         VisualIngredient vi = null;
-        CameraImage ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
+        ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
         Log.d(TAG, "CameraImg created");
         ci.setUserSuggestedName(vivm.getIngredientName());
         ci.setBitmap(vivm.getBmp());
         ci.setCusiene(vivm.getCuisine());
         ci.setUserSuggestedUseFrequency(vivm.getUseFrequency());
         ip.setCameraImage(ci);
-        ci.setDominantColor(ip.getDominantColorInCameraImg());
+        Thread t = new Thread(this);
+        t.start();
+        //Method refactored, also sets avg values now
+        //ci.setDominantColor(ip.getDominantColorInCameraImg());
         ip.setCameraImage(ci);
-        ip.setAverageColors();
-        Log.d(TAG, "Avg colours set");
         GoogleImage gi = gcv.uploadCloudImg();
         Log.d(TAG, "Got google img from cloud");
         //Wait for google to do its processing
@@ -64,17 +66,24 @@ public class VisualIngredientDirector {
             if(gi.getCloudVisionSuggestions() != null)
                 break;
         }*/
+        t.join();
         vi = builder.BuildVisualIngredient(ip,gcv,ci,gi);
         Log.d(TAG,"Sending data");
         sendVisualIngredient(vi);
     }
 
-    private void sendVisualIngredient(VisualIngredient vi) throws JSONException,InterruptedException,NullPointerException{
+    private void sendVisualIngredient(VisualIngredient vi) throws JSONException,InterruptedException{
         JSONObject json = builder.BuildVisualIngredientJSON(vi);
         Log.d(TAG, "sendVisualIngredient: " +json.toString());
         AppServerResponse response = idm.sendJSONToServer(json,"saveIngredient");
         if(response.getHttpStatusCode()!=200){
             throw new InterruptedException(response.getMessage());
         }
+    }
+
+    @Override
+    public void run() {
+        ci.setDominantColor(ip.getDominantColorInCameraImg());
+        Log.d(TAG, "Avg colours set");
     }
 }

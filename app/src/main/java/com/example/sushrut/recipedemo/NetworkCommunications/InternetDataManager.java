@@ -53,13 +53,13 @@ public class InternetDataManager {
         this.context = context;
     }
 
-    public AppServerResponse sendJSONToServer(JSONObject vi, String methodName) throws JSONException,NullPointerException{
+    public AppServerResponse sendJSONToServer(JSONObject vi, String methodName) throws JSONException,InterruptedException{
         //Add server_api key for authorization
-        final String requestBody = vi.toString();
+        String requestBody = vi.toString();
         appServerResponse = new AppServerResponse();
 
         RequestQueue queue = Volley.newRequestQueue(context);
-        JsonObjectRequest JOPR = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,
+        JsonObjectRequest JOPR = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,requestBody,
                 new Response.Listener<JSONObject>(){
             @Override
             public void onResponse(JSONObject response){
@@ -74,8 +74,8 @@ public class InternetDataManager {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d(TAG, "onResponse: "+error.toString());
-                appServerResponse.setHttpStatusCode(error.networkResponse.statusCode);
+                Log.d(TAG, "onErrorResponse: "+error.toString());
+                appServerResponse.setHttpStatusCode(404);
                 appServerResponse.setMessage(error.getMessage());
                 return;
             }
@@ -84,13 +84,13 @@ public class InternetDataManager {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
                 //headers.put("Content-Type", "application/json");
-                headers.put("Content-Type", "application/json; charset=utf-8");
+                headers.put("Content-Type", "application/json");
                 headers.put("x-access-token",SERVER_API_KEY);
                 return headers;
             }
 
 
-            @Override
+            /*@Override
             public byte[] getBody() {
                 try {
                     return requestBody == null ? null : requestBody.getBytes("utf-8");
@@ -98,28 +98,11 @@ public class InternetDataManager {
                     Log.d(TAG, "getBody: " +uee.getMessage());
                     return null;
                 }
-            }
+            }*/
         };
-        JOPR.setRetryPolicy(new RetryPolicy() {
-            @Override
-            public int getCurrentTimeout() {
-                return 10000;
-            }
-
-            @Override
-            public int getCurrentRetryCount() {
-                return 1;
-            }
-
-            @Override
-            public void retry(VolleyError error) throws VolleyError{
-                Log.d(TAG, "retry: "+ error.getMessage());this.getCurrentRetryCount();
-                appServerResponse.setHttpStatusCode(error.networkResponse.statusCode);
-                appServerResponse.setMessage(error.getMessage());
-                return;
-            }
-        });
+        JOPR.setRetryPolicy(new DefaultRetryPolicy (7000,  1, 1f ));
         queue.add(JOPR);
+        Thread.sleep(10000);
         return appServerResponse;
     }
 
