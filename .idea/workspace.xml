@@ -12,11 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d7712f6-bc22-4ed5-9c58-c3ce077ae5ee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-29-16-17-57-075.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-29-16-19-07-969.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-29-16-21-39-153.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-29-16-28-59-949.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-29-16-32-17-531.rawproto" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -29,11 +24,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-debug.aar" afterPath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-debug.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-release.aar" afterPath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
@@ -73,8 +64,8 @@
       <file leaf-file-name="InternetDataManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="-308">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,9 +74,12 @@
       <file leaf-file-name="RequestQueue.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/RequestQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="17">
               <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#7641#7642#0" expanded="false" />
+                <element signature="e#7703#7704#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,9 +87,58 @@
       <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="3927">
               <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
-              <folding />
+              <folding>
+                <element signature="e#0#20440#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4771#4772#0" expanded="false" />
+                <element signature="e#4801#4802#0" expanded="false" />
+                <element signature="e#5222#5223#0" expanded="false" />
+                <element signature="e#5249#5250#0" expanded="false" />
+                <element signature="e#5402#5403#0" expanded="false" />
+                <element signature="e#5439#5440#0" expanded="false" />
+                <element signature="e#5572#5573#0" expanded="false" />
+                <element signature="e#5618#5619#0" expanded="false" />
+                <element signature="e#7813#7814#0" expanded="false" />
+                <element signature="e#7850#7851#0" expanded="false" />
+                <element signature="e#8819#8820#0" expanded="false" />
+                <element signature="e#8886#8887#0" expanded="false" />
+                <element signature="e#9012#9013#0" expanded="false" />
+                <element signature="e#9036#9037#0" expanded="false" />
+                <element signature="e#9135#9136#0" expanded="false" />
+                <element signature="e#9169#9170#0" expanded="false" />
+                <element signature="e#9298#9299#0" expanded="false" />
+                <element signature="e#9337#9338#0" expanded="false" />
+                <element signature="e#9465#9466#0" expanded="false" />
+                <element signature="e#9508#9509#0" expanded="false" />
+                <element signature="e#9945#9946#0" expanded="false" />
+                <element signature="e#9979#9980#0" expanded="false" />
+                <element signature="e#10093#10094#0" expanded="false" />
+                <element signature="e#10125#10126#0" expanded="false" />
+                <element signature="e#10231#10232#0" expanded="false" />
+                <element signature="e#10263#10264#0" expanded="false" />
+                <element signature="e#11865#11866#0" expanded="false" />
+                <element signature="e#11907#11908#0" expanded="false" />
+                <element signature="e#12047#12048#0" expanded="false" />
+                <element signature="e#12090#12091#0" expanded="false" />
+                <element signature="e#13935#13936#0" expanded="false" />
+                <element signature="e#13981#13982#0" expanded="false" />
+                <element signature="e#16090#16091#0" expanded="false" />
+                <element signature="e#16125#16126#0" expanded="false" />
+                <element signature="e#16496#16497#0" expanded="false" />
+                <element signature="e#16534#16535#0" expanded="false" />
+                <element signature="e#16866#16867#0" expanded="false" />
+                <element signature="e#16921#16922#0" expanded="false" />
+                <element signature="e#17051#17052#0" expanded="false" />
+                <element signature="e#17086#17087#0" expanded="false" />
+                <element signature="e#17294#17295#0" expanded="false" />
+                <element signature="e#17335#17336#0" expanded="false" />
+                <element signature="e#17472#17473#0" expanded="false" />
+                <element signature="e#17513#17514#0" expanded="false" />
+                <element signature="e#18385#18386#0" expanded="false" />
+                <element signature="e#18419#18420#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +146,8 @@
       <file leaf-file-name="VisualIngredientBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-461">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state relative-caret-position="442">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +158,8 @@
       <file leaf-file-name="IngredientLibraryActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="215" column="48" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
+            <state relative-caret-position="17">
+              <caret line="221" column="9" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -125,8 +168,8 @@
       <file leaf-file-name="VisualIngredientDirector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+            <state relative-caret-position="118">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2802,8 +2845,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
       </list>
     </option>
@@ -2839,8 +2882,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2849,36 +2895,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecipeDemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecipeDemo" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3293,22 +3312,120 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="195" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="196" />
+      <option name="time" value="199" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="url" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/RequestQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4471">
+          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding>
+            <element signature="e#7641#7642#0" expanded="false" />
+            <element signature="e#7703#7704#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4505">
+          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#20440#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4771#4772#0" expanded="false" />
+            <element signature="e#4801#4802#0" expanded="false" />
+            <element signature="e#5222#5223#0" expanded="false" />
+            <element signature="e#5249#5250#0" expanded="false" />
+            <element signature="e#5402#5403#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5572#5573#0" expanded="false" />
+            <element signature="e#5618#5619#0" expanded="false" />
+            <element signature="e#7813#7814#0" expanded="false" />
+            <element signature="e#7850#7851#0" expanded="false" />
+            <element signature="e#8819#8820#0" expanded="false" />
+            <element signature="e#8886#8887#0" expanded="false" />
+            <element signature="e#9012#9013#0" expanded="false" />
+            <element signature="e#9036#9037#0" expanded="false" />
+            <element signature="e#9135#9136#0" expanded="false" />
+            <element signature="e#9169#9170#0" expanded="false" />
+            <element signature="e#9298#9299#0" expanded="false" />
+            <element signature="e#9337#9338#0" expanded="false" />
+            <element signature="e#9465#9466#0" expanded="false" />
+            <element signature="e#9508#9509#0" expanded="false" />
+            <element signature="e#9945#9946#0" expanded="false" />
+            <element signature="e#9979#9980#0" expanded="false" />
+            <element signature="e#10093#10094#0" expanded="false" />
+            <element signature="e#10125#10126#0" expanded="false" />
+            <element signature="e#10231#10232#0" expanded="false" />
+            <element signature="e#10263#10264#0" expanded="false" />
+            <element signature="e#11865#11866#0" expanded="false" />
+            <element signature="e#11907#11908#0" expanded="false" />
+            <element signature="e#12047#12048#0" expanded="false" />
+            <element signature="e#12090#12091#0" expanded="false" />
+            <element signature="e#13935#13936#0" expanded="false" />
+            <element signature="e#13981#13982#0" expanded="false" />
+            <element signature="e#16090#16091#0" expanded="false" />
+            <element signature="e#16125#16126#0" expanded="false" />
+            <element signature="e#16496#16497#0" expanded="false" />
+            <element signature="e#16534#16535#0" expanded="false" />
+            <element signature="e#16866#16867#0" expanded="false" />
+            <element signature="e#16921#16922#0" expanded="false" />
+            <element signature="e#17051#17052#0" expanded="false" />
+            <element signature="e#17086#17087#0" expanded="false" />
+            <element signature="e#17294#17295#0" expanded="false" />
+            <element signature="e#17335#17336#0" expanded="false" />
+            <element signature="e#17472#17473#0" expanded="false" />
+            <element signature="e#17513#17514#0" expanded="false" />
+            <element signature="e#18385#18386#0" expanded="false" />
+            <element signature="e#18419#18420#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3655">
+          <caret line="215" column="48" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -3337,7 +3454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11543">
           <caret line="679" column="0" selection-start-line="679" selection-start-column="0" selection-end-line="679" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3414,14 +3530,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ingredient_library.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
@@ -3504,7 +3620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="679" column="0" selection-start-line="679" selection-start-column="0" selection-end-line="679" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3516,52 +3631,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="215" column="48" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="3927">
+          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#20440#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4771#4772#0" expanded="false" />
+            <element signature="e#4801#4802#0" expanded="false" />
+            <element signature="e#5222#5223#0" expanded="false" />
+            <element signature="e#5249#5250#0" expanded="false" />
+            <element signature="e#5402#5403#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5572#5573#0" expanded="false" />
+            <element signature="e#5618#5619#0" expanded="false" />
+            <element signature="e#7813#7814#0" expanded="false" />
+            <element signature="e#7850#7851#0" expanded="false" />
+            <element signature="e#8819#8820#0" expanded="false" />
+            <element signature="e#8886#8887#0" expanded="false" />
+            <element signature="e#9012#9013#0" expanded="false" />
+            <element signature="e#9036#9037#0" expanded="false" />
+            <element signature="e#9135#9136#0" expanded="false" />
+            <element signature="e#9169#9170#0" expanded="false" />
+            <element signature="e#9298#9299#0" expanded="false" />
+            <element signature="e#9337#9338#0" expanded="false" />
+            <element signature="e#9465#9466#0" expanded="false" />
+            <element signature="e#9508#9509#0" expanded="false" />
+            <element signature="e#9945#9946#0" expanded="false" />
+            <element signature="e#9979#9980#0" expanded="false" />
+            <element signature="e#10093#10094#0" expanded="false" />
+            <element signature="e#10125#10126#0" expanded="false" />
+            <element signature="e#10231#10232#0" expanded="false" />
+            <element signature="e#10263#10264#0" expanded="false" />
+            <element signature="e#11865#11866#0" expanded="false" />
+            <element signature="e#11907#11908#0" expanded="false" />
+            <element signature="e#12047#12048#0" expanded="false" />
+            <element signature="e#12090#12091#0" expanded="false" />
+            <element signature="e#13935#13936#0" expanded="false" />
+            <element signature="e#13981#13982#0" expanded="false" />
+            <element signature="e#16090#16091#0" expanded="false" />
+            <element signature="e#16125#16126#0" expanded="false" />
+            <element signature="e#16496#16497#0" expanded="false" />
+            <element signature="e#16534#16535#0" expanded="false" />
+            <element signature="e#16866#16867#0" expanded="false" />
+            <element signature="e#16921#16922#0" expanded="false" />
+            <element signature="e#17051#17052#0" expanded="false" />
+            <element signature="e#17086#17087#0" expanded="false" />
+            <element signature="e#17294#17295#0" expanded="false" />
+            <element signature="e#17335#17336#0" expanded="false" />
+            <element signature="e#17472#17473#0" expanded="false" />
+            <element signature="e#17513#17514#0" expanded="false" />
+            <element signature="e#18385#18386#0" expanded="false" />
+            <element signature="e#18419#18420#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/RequestQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding>
+            <element signature="e#7641#7642#0" expanded="false" />
+            <element signature="e#7703#7704#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+        <state relative-caret-position="118">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="221" column="9" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="442">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/2bac9e638b022ca09262960f83e8c9da93d80468/library-1.0.19-sources.jar!/com/android/volley/RequestQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="-308">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>

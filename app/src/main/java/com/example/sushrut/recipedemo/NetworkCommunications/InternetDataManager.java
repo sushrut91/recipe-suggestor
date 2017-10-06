@@ -26,8 +26,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.InterruptedIOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
@@ -53,56 +63,50 @@ public class InternetDataManager {
         this.context = context;
     }
 
-    public AppServerResponse sendJSONToServer(JSONObject vi, String methodName) throws JSONException,InterruptedException{
+    public AppServerResponse sendJSONToServer(JSONObject vi, String methodName) {
         //Add server_api key for authorization
         String requestBody = vi.toString();
         appServerResponse = new AppServerResponse();
 
-        RequestQueue queue = Volley.newRequestQueue(context);
-        JsonObjectRequest JOPR = new JsonObjectRequest(Request.Method.POST, SERVER_URL + methodName,requestBody,
-                new Response.Listener<JSONObject>(){
-            @Override
-            public void onResponse(JSONObject response){
-                try {
-                    Log.d(TAG, "onResponse: "+response.toString(4));
-                    appServerResponse.setMessage(response.toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    return;
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d(TAG, "onErrorResponse: "+error.toString());
-                appServerResponse.setHttpStatusCode(404);
-                appServerResponse.setMessage(error.getMessage());
-                return;
-            }
-        }){
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                //headers.put("Content-Type", "application/json");
-                headers.put("Content-Type", "application/json");
-                headers.put("x-access-token",SERVER_API_KEY);
-                return headers;
-            }
+        HttpURLConnection urlConnection=null;
+        try
+        {
+            URL url = new URL(SERVER_URL+methodName);
+            urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setDoOutput(true);
+            urlConnection.setRequestMethod("POST");
+            urlConnection.setUseCaches(false);
+            urlConnection.setConnectTimeout(10000);
+            urlConnection.setReadTimeout(10000);
+            urlConnection.setRequestProperty("Content-Type","application/json");
+            urlConnection.setRequestProperty("x-access-token","");
+            urlConnection.connect();
+            OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());
+            out.write(vi.toString());
+            out.close();
 
-
-            /*@Override
-            public byte[] getBody() {
-                try {
-                    return requestBody == null ? null : requestBody.getBytes("utf-8");
-                } catch (UnsupportedEncodingException uee) {
-                    Log.d(TAG, "getBody: " +uee.getMessage());
-                    return null;
+            int HttpResult =urlConnection.getResponseCode();
+            if(HttpResult ==HttpURLConnection.HTTP_OK){
+                BufferedReader br = new BufferedReader(new InputStreamReader(
+                        urlConnection.getInputStream(),"utf-8"));
+                String line = null;
+                while ((line = br.readLine()) != null) {
+                    appServerResponse.setMessage(line);
+                    appServerResponse.setHttpStatusCode(200);
                 }
-            }*/
-        };
-        JOPR.setRetryPolicy(new DefaultRetryPolicy (7000,  1, 1f ));
-        queue.add(JOPR);
-        Thread.sleep(10000);
+                br.close();
+            }else{
+                System.out.println(urlConnection.getResponseMessage());
+            }
+        }catch(MalformedURLException mue){
+            appServerResponse.setHttpStatusCode(404);
+            appServerResponse.setMessage(mue.getMessage());
+            Log.d(TAG, "sendJSONToServer: " +mue.getMessage());
+        }catch(IOException ioe){
+            appServerResponse.setHttpStatusCode(404);
+            appServerResponse.setMessage(ioe.getMessage());
+            Log.d(TAG, "sendJSONToServer: " +ioe.getMessage());
+        }
         return appServerResponse;
     }
 
