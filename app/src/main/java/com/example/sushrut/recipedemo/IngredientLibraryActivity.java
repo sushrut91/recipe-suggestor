@@ -38,6 +38,10 @@ public class IngredientLibraryActivity extends AppCompatActivity {
     private static final String TAG=IngredientLibraryActivity.class.getSimpleName();
     private Uri imageUri = null;
     private Bitmap bmpImg = null;
+    //Specifies if Image is captured by the camera. In that case only it should be deleted.
+    private boolean imgDeleteFlag = false;
+    //Do not display success Toast if there is an error in transmission & exception arises.
+    private boolean exceptionFlag = false;
     private static final int PICK_IMAGE_ACTIVITY = 1;
     private static final int CAMERA_ACTIVITY = 2;
 
@@ -61,6 +65,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
                 startActivityForResult(Intent.createChooser(intent,"Select a photo"),PICK_IMAGE_ACTIVITY);
             }
         });
@@ -83,6 +89,7 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                             vivm.setCuisene(cuisineSpinner.getSelectedItem().toString());
                             vivm.setIngredientName(ingredientNameTxt.getText().toString());
                             vivm.setBmp(bmpImg);
+                            vivm.setImageToBeDeleted(imgDeleteFlag);
                             if(lowFrequencyRadio.isChecked())
                                 vivm.setUseFrequency(0);
                             else
@@ -126,7 +133,6 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         ImageView ingredientImgView = (ImageView) findViewById(R.id.ingredientImgView);
         if (requestCode == PICK_IMAGE_ACTIVITY  && resultCode == RESULT_OK && data != null) {
             imageUri = data.getData();
-            this.grantUriPermission(getPackageName(), imageUri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             try{
                  boolean permissionTest = /*PermissionUtils.requestPermission(
                          this,PICK_IMAGE_ACTIVITY,
@@ -166,8 +172,8 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                                 this,
                                 CAMERA_ACTIVITY,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
-                    //Bitmap capturedImg = (Bitmap)data.getExtras().get("data");
+                    //Mark image eligible for deletion.
+                    imgDeleteFlag = true;
                     ingredientImgView.setImageBitmap(bmpImg);
 
                 }
@@ -217,11 +223,15 @@ public class IngredientLibraryActivity extends AppCompatActivity {
                     vid.createVisualIngredient(vivm);
                 }
             catch (InterruptedException ie){
+                exceptionFlag = true;
                 Snackbar.make(findViewById(R.id.mainLinearLayout),"Error sending data. " +
                         "Error connecting to cloud server.Please check your network connection",Snackbar.LENGTH_LONG).show();
             }  catch(JSONException je){
+                exceptionFlag = true;
                 Snackbar.make(findViewById(R.id.mainLinearLayout),"Error in data format.",Snackbar.LENGTH_LONG).show();
             } catch(Exception ex){
+                exceptionFlag = true;
+                Snackbar.make(findViewById(R.id.mainLinearLayout),"App performed illegal an operation.",Snackbar.LENGTH_LONG).show();
                 Log.d(TAG, "onClick: " + ex.getMessage());
             }
             return null;
@@ -230,8 +240,10 @@ public class IngredientLibraryActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library."
-                    ,Toast.LENGTH_SHORT).show();
+            if(!exceptionFlag){
+                Toast.makeText(getApplicationContext(),"Ingredient successfully added to cloud library."
+                        ,Toast.LENGTH_SHORT).show();
+            }
             progDailog.dismiss();
         }
     }

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RecipeDemo.iml" filepath="$PROJECT_DIR$/RecipeDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/openCVLib330/openCVLib330.iml" filepath="$PROJECT_DIR$/openCVLib330/openCVLib330.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recipe-suggestor.iml" filepath="$PROJECT_DIR$/recipe-suggestor.iml" />
     </modules>
   </component>
 </project>

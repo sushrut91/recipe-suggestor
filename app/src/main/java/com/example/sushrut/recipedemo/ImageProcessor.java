@@ -59,7 +59,10 @@ public class ImageProcessor {
                 }
             }
         }
-        CommonUtils.DeleteCameraImage(ci.getContext(),ci.getImageUri());
+
+        if(ci.isImageToBeDeleted())
+            //Image is deleted only if captured from camera. This was cause for the security exception.
+            CommonUtils.DeleteCameraImage(ci.getContext(),ci.getImageUri());
         return detectedShape;
     }
     private List<MatOfPoint> GetContourMatPointList(){

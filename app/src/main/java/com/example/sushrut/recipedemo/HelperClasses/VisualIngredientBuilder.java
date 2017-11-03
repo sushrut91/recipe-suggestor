@@ -33,14 +33,21 @@ public class VisualIngredientBuilder {
         vi.setUseFrequencyRating(ci.getUserSuggestedUseFrequency());
 
         // Set GoogleImage properties
-        vi.setGoogleRedVal(gi.getRedVal());
-        vi.setGoogleGreenVal(gi.getGreenVal());
-        vi.setGoogleBlueVal(gi.getBlueVal());
-        vi.setGoogleSuggestions(gi.getCloudVisionSuggestions());
-        vi.setGoogleSuggestedName(gi.getGoogleSuggestedName());
-        vi.setGoogleDominantColor(gi.getDominantColor());
-        Map.Entry<String,Float> entry =gi.getCloudVisionSuggestions().entrySet().iterator().next();
-        vi.setGoogleSuggestedName(entry.getKey().toString());
+        if(checkGoogleResponseForNulls(gi))
+        {
+            vi.setGoogleRedVal(gi.getRedVal());
+            vi.setGoogleGreenVal(gi.getGreenVal());
+            vi.setGoogleBlueVal(gi.getBlueVal());
+            vi.setGoogleSuggestions(gi.getCloudVisionSuggestions());
+            vi.setGoogleSuggestedName(gi.getGoogleSuggestedName());
+            vi.setGoogleDominantColor(gi.getDominantColor());
+            Map.Entry<String,Float> entry =gi.getCloudVisionSuggestions().entrySet().iterator().next();
+            vi.setGoogleSuggestedName(entry.getKey().toString());
+        }
+        else
+        {
+            setGoogleDefaultParameteres(vi);
+        }
 
         //Set User provided properties
         vi.setUserSuggestedName(ci.getUserSuggestedName());
@@ -68,5 +75,24 @@ public class VisualIngredientBuilder {
         json.put("google_blue_value",vi.getGoogleBlueVal());
         json.put("google_suggestions",vi.getGoogleSuggestions().toString());
         return json;
+    }
+
+    private boolean checkGoogleResponseForNulls(GoogleImage gi){
+        boolean result
+                = gi.getBlueVal() != null && gi.getRedVal() != null
+                && gi.getGreenVal() != null  && gi.getCloudVisionSuggestions()!= null
+                && gi.getGoogleSuggestedName() != null && gi.getDominantColor() != null;
+        return result;
+    }
+
+    private void setGoogleDefaultParameteres(VisualIngredient vi)
+    {
+        vi.setGoogleRedVal(-1);
+        vi.setGoogleGreenVal(-1);
+        vi.setGoogleBlueVal(-1);
+        vi.setGoogleSuggestions(null);
+        vi.setGoogleSuggestedName("Error");
+        vi.setGoogleDominantColor("Error");
+        vi.setGoogleSuggestedName("Error");
     }
 }

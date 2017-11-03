@@ -53,7 +53,6 @@ public class InternetDataManager {
     private final String TAG = "InternetDataManager";
     private String SERVER_API_KEY = null;
     private Context context = null;
-    private JSONArray responseJsonArray = null;
     public String SERVER_URL = null;
     private AppServerResponse appServerResponse = null;
 

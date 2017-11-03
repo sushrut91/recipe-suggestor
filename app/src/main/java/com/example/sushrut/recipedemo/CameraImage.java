@@ -12,9 +12,6 @@ import java.net.URISyntaxException;
 
 public class CameraImage {
     private Uri imageUri = null;
-
-
-
     private Bitmap bitmap = null;
     int redVal;
     int greenVal;
@@ -23,6 +20,15 @@ public class CameraImage {
     private String cusiene;
     private int userSuggestedUseFrequency;
     private String userSuggestedName;
+    private boolean imageToBeDeleted;
+
+    public boolean isImageToBeDeleted() {
+        return imageToBeDeleted;
+    }
+
+    public void setImageToBeDeleted(boolean imageToBeDeleted) {
+        this.imageToBeDeleted = imageToBeDeleted;
+    }
 
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
@@ -80,11 +86,12 @@ public class CameraImage {
     Context context = null;
     String filePath = null;
 
-    public CameraImage(Context context,Uri imageUri ,Bitmap capturedImage) throws URISyntaxException {
+    public CameraImage(Context context,Uri imageUri ,Bitmap capturedImage, boolean imageToBeDeleted) throws URISyntaxException {
         this.context = context;
         this.imageUri = imageUri;
         this.filePath = CommonUtils.getFilePathFromURI(context,imageUri);
         this.bitmap = CommonUtils.CompressBitmap(capturedImage);
+        this.imageToBeDeleted = imageToBeDeleted;
     }
 
     public Context getContext() {

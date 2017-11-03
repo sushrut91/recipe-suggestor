@@ -46,7 +46,7 @@ public class VisualIngredientDirector implements Runnable{
             ExecutionException,InterruptedException,JSONException
     {
         VisualIngredient vi = null;
-        ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp());
+        ci = new CameraImage(vivm.getAppContext(),vivm.getImgUri(),vivm.getBmp(),vivm.getImageToBeDeleted());
         Log.d(TAG, "CameraImg created");
         ci.setUserSuggestedName(vivm.getIngredientName());
         ci.setBitmap(vivm.getBmp());

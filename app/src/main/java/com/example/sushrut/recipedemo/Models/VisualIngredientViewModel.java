@@ -18,6 +18,7 @@ public class VisualIngredientViewModel {
     private String packageName;
     private String activitySimpleName;
     private PackageManager pm;
+    private boolean imageToBeDeleted;
 
     public ContentResolver getContentResolver() {
         return contentResolver;
@@ -37,8 +38,16 @@ public class VisualIngredientViewModel {
         this.imgUri = imgUri;
         this.appContext = appContext;
         this.contentResolver = contentResolver;
+        this.imageToBeDeleted = false;
     }
 
+    public boolean getImageToBeDeleted() {
+        return imageToBeDeleted;
+    }
+
+    public void setImageToBeDeleted(boolean imageToBeDeleted) {
+        this.imageToBeDeleted = imageToBeDeleted;
+    }
     public Uri getImgUri() {
         return imgUri;
     }
