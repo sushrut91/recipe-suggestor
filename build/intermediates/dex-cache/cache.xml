@@ -3,21 +3,30 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8fadaae03a3de6fe6108396acc75c681b95cc8b9">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-1.3.9_667fb1880246f96ff51fea00b160b243633dd117\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_eae8fca1b3659729d9ba33a9408e8f51ada9c938\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="a983ce1a6196b2c2e315e96aabce65ae4458d75f">
-        <dex dex="C:\Users\Sushrut\AndroidStudioProjects\RecipeDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cca1623fac9cac0609dab2bc097998535c0937b6\classes.dex" />
     </item>
 
 </items>

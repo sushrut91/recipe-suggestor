@@ -57,8 +57,6 @@ public class RecipeCall extends AppCompatActivity {
                         InternetDataManager(new BuildConfig(),getApplicationContext()));
                 try
                 {
-                    RecipeService recipeService = new RecipeService(new InternetDataManager(new BuildConfig()
-                            ,getApplicationContext()));
                     getJSONFromRecipeApi(recipeSearchTxt.getText().toString(),rs.getFindByRecipeNameURL(),rs);
                 }catch (JSONException je){
                     Log.d(TAG, je.getMessage());
@@ -93,7 +91,8 @@ public class RecipeCall extends AppCompatActivity {
                                 JSONObject recipe = resultArray.getJSONObject(i);
                                 int id = Integer.parseInt(recipe.getString("id"));
                                 String title = recipe.getString("title");
-                                String img = recipe.getString("imageUrls");
+                                String img = "https://spoonacular.com/recipeImages/"+recipe.getString("imageUrls");
+                                Log.d(TAG, "onResponse: Image Got url" + img);
                                 String cookingTime = recipe.getString("readyInMinutes");
                                 Drawable dimg = new BitmapDrawable(img);
                                 RecipeModel rm = new RecipeModel(id,title,cookingTime);

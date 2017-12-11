@@ -50,4 +50,8 @@ public class RecipeModel {
         this.recipeImage = recipeImage;
     }
 
+    @Override
+    public String toString() {
+        return this.getRecipeTitle() + "\n" + this.getCookingTime();
+    }
 }
