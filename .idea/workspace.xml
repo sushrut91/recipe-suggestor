@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
@@ -16,46 +16,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_openCVLib330_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_openCVLib330_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_openCVLib330_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_openCVLib330_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-debug.aar" afterPath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-release.aar" afterPath="$PROJECT_DIR$/openCVLib330/build/outputs/aar/openCVLib330-release.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/generated/source/aidl/debug/org/opencv/engine/OpenCVEngineInterface.java" afterPath="$PROJECT_DIR$/openCVLib330/build/generated/source/aidl/debug/org/opencv/engine/OpenCVEngineInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/generated/source/aidl/release/org/opencv/engine/OpenCVEngineInterface.java" afterPath="$PROJECT_DIR$/openCVLib330/build/generated/source/aidl/release/org/opencv/engine/OpenCVEngineInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/generated/source/buildConfig/androidTest/debug/org/opencv/test/BuildConfig.java" afterPath="$PROJECT_DIR$/openCVLib330/build/generated/source/buildConfig/androidTest/debug/org/opencv/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/generated/source/buildConfig/release/org/opencv/BuildConfig.java" afterPath="$PROJECT_DIR$/openCVLib330/build/generated/source/buildConfig/release/org/opencv/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/blame/res/androidTest/debug/multi/values.json" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/blame/res/androidTest/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/default/AndroidManifest.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/default/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/default/res/values/values.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/bundles/default/res/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/mergeReleaseShaders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/merged.dir/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/merger.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/incremental/packageReleaseResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifests/aapt/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifests/aapt/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/manifests/aapt/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/build/intermediates/res/merged/androidTest/debug/values/values.xml" afterPath="$PROJECT_DIR$/openCVLib330/build/intermediates/res/merged/androidTest/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openCVLib330/openCVLib330.iml" afterPath="$PROJECT_DIR$/openCVLib330/openCVLib330.iml" />
     </list>
     <ignored path="RecipeDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,12 +57,9 @@
       <file leaf-file-name="RecipeModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="54" column="67" lean-forward="false" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
-              <folding>
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="142">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,8 +67,8 @@
       <file leaf-file-name="RecipeCall.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="782">
+              <caret line="130" column="82" lean-forward="true" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -113,11 +77,33 @@
       <file leaf-file-name="RecipeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="109" />
+            <state relative-caret-position="115">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="e#862#863#0" expanded="true" />
                 <element signature="e#904#905#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageLoadTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/ImageLoadTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,6 +122,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>contour</find>
+      <find>params</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -2784,7 +2771,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ListItem.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/VolleyCallback.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listitem.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_call.xml" />
@@ -2805,7 +2791,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/ImageLoadTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java" />
       </list>
     </option>
@@ -2846,6 +2834,38 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecipeDemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecipeDemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipedemo" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -2868,7 +2888,7 @@
     <property name="DEBUGGABLE_PROCESS" value="com.example.sushrut.recipedemo" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="SearchEverywhereHistoryKey" value="Recipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.RecipeCall&#10;RecipeM&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.Models.RecipeModel&#10;Image&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java&#10;Activi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;VisualIngredientDi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java&#10;Direc&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector&#10;SendVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector#sendVisualIngredient&#10;Director&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java&#10;Camer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java&#10;Goo&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;Dire&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector&#10;Google&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;Vi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;Builder&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;GoogleCl&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;GoogleIm&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/Models/GoogleImage.java&#10;Camera&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java&#10;Clou&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;PickIma&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.MainActivity#PICK_IMAGE_ACTIVITY&#10;Acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;MainA&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;BuildVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientBuilder#BuildVisualIngredientJSON&#10;strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
+    <property name="SearchEverywhereHistoryKey" value="Recipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;RecipeM&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.Models.RecipeModel&#10;Image&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/ImageProcessor.java&#10;Activi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;VisualIngredientDi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java&#10;Direc&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector&#10;SendVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector#sendVisualIngredient&#10;Director&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientDirector.java&#10;Camer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java&#10;Goo&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;Dire&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientDirector&#10;Google&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;Vi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;Builder&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/VisualIngredientBuilder.java&#10;Ingredi&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;GoogleCl&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;GoogleIm&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/Models/GoogleImage.java&#10;Camera&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/CameraImage.java&#10;Clou&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/GoogleCloudVision.java&#10;PickIma&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.MainActivity#PICK_IMAGE_ACTIVITY&#10;Acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/IngredientLibraryActivity.java&#10;MainA&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;BuildVisual&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.VisualIngredientBuilder#BuildVisualIngredientJSON&#10;strings.&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;RecipeS&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;RecipeSer&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java&#10;INter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Main&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;REcipe&#9;PSI&#9;JAVA://com.example.sushrut.recipedemo.HelperClasses.RecipeListAdapter&#10;stri&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;string&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/res/values/strings.xml&#10;Internet&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;Grad&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/build.gradle&#10;Gra&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/build.gradle&#10;Inter&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/NetworkCommunications/InternetDataManager.java&#10;IV&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/IVisualIngredient.java&#10;acti&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/java/com/example/sushrut/recipedemo/MainActivity.java&#10;android&#9;FILE&#9;file://C:/Users/Sushrut/AndroidStudioProjects/RecipeDemo/app/src/main/AndroidManifest.xml" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/download_2tengcellcd_fes8c72cig6_4516535/Solution" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.3.3" />
   </component>
@@ -2966,7 +2986,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513023451223" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513027747426" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3014,7 +3034,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513023451223" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513027747427" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3048,6 +3068,27 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
@@ -3066,6 +3107,31 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RecipeDemo" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
       <method />
     </configuration>
@@ -3151,7 +3217,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513023451225" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1513027747430" />
       </method>
     </configuration>
     <list size="1">
@@ -3205,39 +3271,39 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29865772" sideWeight="0.48638427" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29865772" sideWeight="0.48638427" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46644294" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46644294" sideWeight="0.5151286" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5030257" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46644294" sideWeight="0.48487142" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46644294" sideWeight="0.48487142" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34568834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3454,6 +3520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3546,6 +3613,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3671,10 +3739,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/ImageLoadTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="109" />
+        <state relative-caret-position="115">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="e#862#863#0" expanded="true" />
             <element signature="e#904#905#0" expanded="true" />
@@ -3682,21 +3768,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/Models/RecipeModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/HelperClasses/RecipeListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="54" column="67" lean-forward="false" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/sushrut/recipedemo/RecipeCall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="782">
+          <caret line="130" column="82" lean-forward="true" selection-start-line="130" selection-start-column="82" selection-end-line="130" selection-end-column="82" />
           <folding />
         </state>
       </provider>

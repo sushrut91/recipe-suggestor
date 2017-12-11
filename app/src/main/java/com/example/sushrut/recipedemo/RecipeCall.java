@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,7 +34,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,7 +80,7 @@ public class RecipeCall extends AppCompatActivity {
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
 // Request a string response from the provided URL.
-        final JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.GET, url,
+        final JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.GET, url, params,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response){
@@ -91,12 +95,15 @@ public class RecipeCall extends AppCompatActivity {
                                 JSONObject recipe = resultArray.getJSONObject(i);
                                 int id = Integer.parseInt(recipe.getString("id"));
                                 String title = recipe.getString("title");
-                                String img = "https://spoonacular.com/recipeImages/"+recipe.getString("imageUrls");
-                                Log.d(TAG, "onResponse: Image Got url" + img);
+                                String imgName = recipe.getString("imageUrls");
+                                imgName = imgName.substring(2,imgName.length()-2);
+                                String imgURL = "https://spoonacular.com/recipeImages/" + imgName;
+                                Log.d(TAG, "onResponse: Image Got url" + imgURL);
                                 String cookingTime = recipe.getString("readyInMinutes");
-                                Drawable dimg = new BitmapDrawable(img);
+
                                 RecipeModel rm = new RecipeModel(id,title,cookingTime);
-                                rm.setRecipeImage(dimg);
+                                rm.setRecipeImage(imgURL);
+
                                 recipes.add(rm);
                             }
                         //new ArrayAdapter<String>(this, R.layout.a_layout_file,
@@ -109,7 +116,6 @@ public class RecipeCall extends AppCompatActivity {
                     catch(JSONException ex){
                            Log.d(TAG, "onResponse: " +ex.getMessage());
                     }
-
                     }
                 }, new Response.ErrorListener() {
             @Override

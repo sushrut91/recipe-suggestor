@@ -3,6 +3,8 @@ package com.example.sushrut.recipedemo.Models;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
+import java.net.URI;
+
 /**
  * Created by Sushrut on 8/19/2017.
  */
@@ -14,7 +16,7 @@ public class RecipeModel {
     private String cookingTime;
 
 
-    private Drawable recipeImage;
+    private String recipeImage;
 
     public RecipeModel(int recipeId, String recipeTitle, String cookingTime){
         this.recipeId = recipeId;
@@ -42,16 +44,16 @@ public class RecipeModel {
         this.recipeTitle = recipeTitle;
     }
 
-    public Drawable getRecipeImage() {
+    public String getRecipeImage() {
         return recipeImage;
     }
 
-    public void setRecipeImage(Drawable recipeImage) {
+    public void setRecipeImage(String recipeImage) {
         this.recipeImage = recipeImage;
     }
 
     @Override
     public String toString() {
-        return this.getRecipeTitle() + "\n" + this.getCookingTime();
+        return this.getRecipeTitle() + "\n" + "Made in " +this.getCookingTime() +" minutes";
     }
 }

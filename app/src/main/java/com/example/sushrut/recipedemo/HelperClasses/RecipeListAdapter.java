@@ -2,6 +2,7 @@ package com.example.sushrut.recipedemo.HelperClasses;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import com.example.sushrut.recipedemo.Models.RecipeModel;
 import com.example.sushrut.recipedemo.R;
 
+import java.net.URI;
+import java.net.URLDecoder;
 import java.util.List;
 
 /**
@@ -37,12 +40,11 @@ public class RecipeListAdapter extends ArrayAdapter<RecipeModel> {
             TextView nameText = (TextView)convertView.findViewById(R.id.recipeNameTxt);
             nameText.setText(recipe.getRecipeTitle().toString());
 
-            TextView cookingTimeText = (TextView)convertView.findViewById(R.id.cookingTimeTxt);
-            nameText.setText("Ready in " + recipe.getCookingTime().toString() +" mins");
-
             ImageView recipeImgView = (ImageView)convertView.findViewById(R.id.recipeImg);
-            Drawable recipeImgDrawable = recipe.getRecipeImage();
-            recipeImgView.setImageDrawable(recipeImgDrawable);
+            new ImageLoadTask(recipe.getRecipeImage(), recipeImgView).execute();
+            //recipeImgView.setImageURI();
+            //Drawable recipeImgDrawable = recipe.getRecipeImage();
+            //recipeImgView.setImageDrawable(recipeImgDrawable); recipeImgView.setu
         }
 
         return super.getView(position, convertView, parent);
